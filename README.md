@@ -66,7 +66,7 @@ ESLint
 ## Instalación
 
 ## 1- Clonar el repositorio
-git clone https://github.com/tuusuario/nexus.git
+git clone https://github.com/AnamZapa/nexus.git
 
 ## 2- Instalar dependencias
 npm install
