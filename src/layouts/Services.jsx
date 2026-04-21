@@ -1,27 +1,28 @@
-import Sidebar from '../components/Sidebar'; 
-import Card from '../components/Card'
-import Footer from '../components/Footer'
+import { useEffect, useState } from "react";
+import { apiFetch, endpoints } from "../services/api";
 
+export default function Services() {
 
-const Services = function(){
-    return(
-        <main>
-            <Sidebar/>
-            <section>
-                <h1>Bienvenido</h1>
-                <h2>Conoce nuestros programas</h2>
-                <div>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                </div>
-                <Footer/>
-            </section>
-        </main>
-    )
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+
+    const loadServices = async () => {
+      const data = await apiFetch(endpoints.services);
+      setServices(data || []);
+    };
+
+    loadServices();
+
+  }, []);
+
+  return (
+    <div>
+      <h2>Servicios</h2>
+
+      {services.map((service) => (
+        <p key={service.id}>{service.name}</p>
+      ))}
+    </div>
+  );
 }
-
-export default Services
