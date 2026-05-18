@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { successAlert, errorAlert } from "../helpers/alerts";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -13,10 +14,10 @@ export default function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (form.contrasena !== form.confirmar) {
-      alert("❌ Las contraseñas no coinciden.");
+      errorAlert("Las contraseñas no coinciden");
       return;
     }
-    alert("✅ Cuenta creada exitosamente.");
+    successAlert("Cuenta creada exitosamente");
     navigate("/login");
   };
 

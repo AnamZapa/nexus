@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #001f33, #003d5c);
+  color: white;
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+
+
+.sidebar .logo {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  color: #bbb;
+}
+
+.sidebar li.active, .sidebar li:hover {
+  color: #00cfff;
+  font-weight: bold;
+}
+
+.main-panel {
+  flex-grow: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #00cfff;
+  padding-bottom: 10px;
+  width: fit-content;
+}
+
+.search-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+}
+
+.aspirante-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.aspirante-card {
+  background-color: #112233;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #00cfff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aspirante-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.estado {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.estado.en-proceso { background: orange; }
+.estado.aprobado { background: green; }
+.estado.rechazado { background: red; }
+

@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout base */
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle, #001820, #000);
+  color: white;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Navbar */
+.navbar-custom {
+  background-color: transparent;
+}
+
+.logo-icon {
+  width: 100px;
+  margin-right: 8px;
+  margin-left: 17px;
+}
+
+.search-bar {
+  background-color: #00181a;
+  border: 1px solid #2c3e50;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.search-bar::placeholder {
+  color: #ccc;
+}
+
+/* Botón del portal */
+.btn {
+  margin: 0 10px;
+}
+
+.portal-btn {
+  background-color: white;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Textos principales */
+h1 {
+  color: #00d2ff;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Grid de programas */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+  padding: 0 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tarjetas */
+.program-grid a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.program-grid a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
+
+.program {
+  background-color: #131b2a;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.program img {
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.program p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.program span {
+  font-size: 30px;
+  font-size: 0.9em;
+}
+
+/* Colores por categoría */
+.blue span { color: #00d2ff; }
+.green span { color: #b0ff00; }
+.magenta span { color: #ff00aa; }
+.purple span { color: #ff00ff; }
+.cyan span { color: #00ffff; }
+.yellow span { color: #e6ff00; }
+
+/* Footer */
+footer {
+  background-color: #002740;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+
+  .program-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .logo-icon {
+    width: 80px;
+  }
+
+  .search-bar {
+    width: 180px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .program-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 0 30px;
+  }
+
+  .search-bar {
+    width: 220px;
+  }
+}

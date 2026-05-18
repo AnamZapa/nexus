@@ -1,23 +1,21 @@
-import { Outlet } from "react-router-dom";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './routes/AppRoutes';
 
-export default function App() {
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-  const token = localStorage.getItem("token");
-
+function App() {
   return (
-    <div>
-      <Sidebar />
+    <Router>
+      <div className="page-wrapper">
+        <Navbar />
 
-      <main>
-        <Outlet />
-      </main>
+        <AppRoutes />
 
-      <Footer />
-
-      {token && <p>Sesión activa</p>}
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
+export default App;

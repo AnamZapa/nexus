@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("/src/assets/Imagenes/Fondo\ Producción\ de\ Eventos.png");
+  background-size: cover;
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(7, 17, 31, 0.8);
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search {
+  padding: 0.5rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 250px;
+  background-color: #14273e;
+  color: white;
+}
+
+.portal-btn {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.titulo {
+  color: #00cfff;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.info-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background-color: rgba(23, 41, 65, 0.95);
+  padding: 1.5rem;
+  border-radius: 15px;
+  flex: 1 1 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.card h2 {
+  color: #00cfff;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.card p, .card ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.card ul ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.inscripcion {
+  margin-top: 2rem;
+}
+
+.btn-inscripcion {
+  background-color: #00cfff;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(7, 17, 31, 0.8);
+  color: #ccc;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .info-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
