@@ -1,141 +1,154 @@
-const careers = [
-  {
-    id: 1,
-    title: "Arte Culinario",
-    image: "../assets/Arte Culinario.png",
-    degree: "Profesional en Gastronomía y Artes Culinarias",
-    description:
-      "Al finalizar el programa, el egresado contará con las competencias necesarias para transformar la materia prima en preparaciones culinarias nacionales e internacionales, aplicando técnicas acordes con la normatividad vigente y las tendencias actuales en el sector de la restauración; promoviendo la capacidad propositiva y creativa; desarrollando habilidades de planificación y organización; permitiendo asegurar procesos de calidad con una dimensión desarrolladora e investigativa a través del trabajo en equipo y actividades experienciales.",
-    duration: "8 semestres",
-    modality: "Presencial",
-    schedule:
-      "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-      "Fotocopia del documento.",
-      "Fotocopia del diploma.",
-      "Certificado de estudio."
-    ],
-  },
-  {
-    id: 2,
-    title: "Desarrollo de Software",
-    image: "../assets/Desarrollo de Software.png",
-    degree: "Profesional en Desarrollo de Software",
-    description: "Al finalizar el programa, el egresado contará con las competencias necesarias para diseñar, desarrollar, implementar y mantener soluciones de software de alta calidad, utilizando metodologías ágiles y tecnologías modernas; promoviendo la capacidad de innovación y resolución de problemas; desarrollando habilidades de trabajo en equipo y comunicación efectiva; permitiendo contribuir al avance tecnológico y digital en diversos sectores industriales.",
-    duration: "8 semestres",    
-    modality: "Presencial",
-    schedule: "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-      "Fotocopia del documento.",
-      "Fotocopia del diploma.",
-      "Certificado de estudio."
-    ],
-  },
-  {
-    id: 3,
-    title: "Comercio Internacional",
-    image: "../assets/Comercio Internacional.png",
-    degree: "Profesional en Comercio Internacional",
-    description: "Al finalizar el programa, el egresado contará con las competencias necesarias para gestionar operaciones de comercio internacional, analizando mercados globales, desarrollando estrategias de exportación e importación, y aplicando normativas internacionales; promoviendo la capacidad de negociación y liderazgo; desarrollando habilidades de análisis económico y financiero; permitiendo contribuir al crecimiento económico y la competitividad en el ámbito global.",
-    duration: "8 semestres",
-    modality: "Presencial",
-    schedule: "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-        "Fotocopia del documento.",
-        "Fotocopia del diploma.",
-        "Certificado de estudio."
-    ],
-  },
-  {
-    id: 4,
-    title: "Seguridad Laboral",
-    image: "../assets/Seguridad Laboral.png",
-    degree: "Profesional en Seguridad Laboral",
-    description: "Al finalizar el programa, el egresado contará con las competencias necesarias para identificar, evaluar y controlar riesgos laborales, implementando programas de seguridad y salud en el trabajo; promoviendo la cultura de prevención y bienestar laboral; desarrollando habilidades de liderazgo y comunicación efectiva; permitiendo contribuir a la creación de ambientes laborales seguros y saludables en diversos sectores industriales.",
-    duration: "8 semestres",
-    modality: "Presencial",
-    schedule: "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-        "Fotocopia del documento.",
-        "Fotocopia del diploma.",
-        "Certificado de estudio."
-    ],
-  },
-  {
-    id: 5,
-    title: "Sistemas Informáticos",
-    image: "../assets/Sistemas Informáticos.png",
-    degree: "Profesional en Sistemas Informáticos",
-    description: "Al finalizar el programa, el egresado contará con las competencias necesarias para diseñar, implementar y administrar sistemas informáticos eficientes y seguros, utilizando tecnologías de vanguardia; promoviendo la capacidad de innovación y resolución de problemas; desarrollando habilidades de trabajo en equipo y comunicación efectiva; permitiendo contribuir al avance tecnológico y digital en diversos sectores industriales.",
-    duration: "8 semestres",
-    modality: "Presencial",
-    schedule: "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-        "Fotocopia del documento.",
-        "Fotocopia del diploma.",
-        "Certificado de estudio."
-    ],
-  },
-  {
-    id: 6,
-    title: "Producción de Eventos",
-    image: "../assets/Producción de Eventos.png",
-    degree: "Profesional en Producción de Eventos",
-    description: "Al finalizar el programa, el egresado contará con las competencias necesarias para planificar, organizar y ejecutar eventos de diversa índole, gestionando recursos, coordinando equipos y aplicando estrategias de marketing; promoviendo la capacidad de innovación y creatividad; desarrollando habilidades de liderazgo y comunicación efectiva; permitiendo contribuir al éxito y la excelencia en la producción de eventos en diversos sectores industriales.",
-    duration: "8 semestres",
-    modality: "Presencial",
-    schedule: "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-        "Fotocopia del documento.",
-        "Fotocopia del diploma.",
-        "Certificado de estudio."
-    ],
-  },    
-  {
-    id: 7,
-    title: "Administración de Empresas",
-    image: "../assets/Administración de Empresas.png",
-    degree: "Profesional en Administración de Empresas",
-    description: "Al finalizar el programa, el egresado contará con las competencias necesarias para gestionar y liderar organizaciones empresariales, aplicando principios de administración, finanzas, marketing y recursos humanos; promoviendo la capacidad de innovación y toma de decisiones estratégicas; desarrollando habilidades de liderazgo y comunicación efectiva; permitiendo contribuir al crecimiento y la competitividad en el ámbito empresarial.",
-    duration: "8 semestres",
-    modality: "Presencial",
-    schedule: "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-        "Fotocopia del documento.",
-        "Fotocopia del diploma.",
-        "Certificado de estudio."
-    ]
-},
-{
-    id: 8,
-    title: "Diseño Gráfico",
-    image: "../assets/Diseño Gráfico.png",
-    degree: "Profesional en Diseño Gráfico",
-    description: "Al finalizar el programa, el egresado contará con las competencias necesarias para crear y comunicar visualmente ideas y conceptos a través de diversos medios, utilizando herramientas de diseño gráfico; promoviendo la capacidad de innovación y creatividad; desarrollando habilidades de trabajo en equipo y comunicación efectiva; permitiendo contribuir al éxito y la excelencia en proyectos de diseño gráfico en diversos sectores industriales.",
-    duration: "8 semestres",
-    modality: "Presencial",
-    schedule: "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-        "Fotocopia del documento.",
-        "Fotocopia del diploma.",
-        "Certificado de estudio."
-    ]
-},   
-{
-    id: 9,
-    title: "Marketing Digital",
-    image: "../assets/Marketing Digital.png",
-    degree: "Profesional en Marketing Digital",
-    description: "Al finalizar el programa, el egresado contará con las competencias necesarias para diseñar, implementar y gestionar estrategias de marketing digital, utilizando herramientas y tecnologías de vanguardia; promoviendo la capacidad de innovación y creatividad; desarrollando habilidades de trabajo en equipo y comunicación efectiva; permitiendo contribuir al éxito y la excelencia en el ámbito del marketing digital en diversos sectores industriales.",
-    duration: "8 semestres",
-    modality: "Presencial",
-    schedule: "Lunes a viernes mañana, tarde y noche.",
-    requirements: [
-        "Fotocopia del documento.",
-        "Fotocopia del diploma.",
-        "Certificado de estudio."
-    ]
-}
-];
+import arteIcon from "../assets/imagenes/Arte Culinario.png";
+import softwareIcon from "../assets/imagenes/Desarrollo de Software.png";
+import comercioIcon from "../assets/imagenes/Comercio Internacional.png";
+import seguridadIcon from "../assets/imagenes/Seguridad Laboral.png";
+import sistemasIcon from "../assets/imagenes/Sistemas Informáticos.png";
+import eventosIcon from "../assets/imagenes/Producción de Eventos.png";
 
-export default careers;
+
+import arteFondo from "../assets/imagenes/Fondo Arte Culinario.png";
+import softwareFondo from "../assets/imagenes/Fondo Desarrollo de Software.jpeg";
+import comercioFondo from "../assets/imagenes/Fondo Comercio Internacional.png";
+import seguridadFondo from "../assets/imagenes/Fondo Seguridad Laboral.png";
+import sistemasFondo from "../assets/imagenes/Fondo Sistemas Informáticos.png";
+import eventosFondo from "../assets/imagenes/Fondo Producción de Eventos.png";
+
+export const careers = [
+  {
+    id: "arte-culinario",
+    title: "Arte Culinario",
+
+    icon: arteIcon,     
+    image: arteFondo,   
+
+    degree: "Profesional en Gastronomía y Artes Culinarias",
+
+    description:
+      "El egresado podrá transformar materias primas en preparaciones culinarias nacionales e internacionales aplicando técnicas actuales del sector gastronómico.",
+
+    duration: "8 semestres",
+    modality: "Presencial",
+    schedule: "Lunes a viernes mañana, tarde y noche.",
+
+    requirements: [
+      "Fotocopia del documento",
+      "Fotocopia del diploma",
+      "Certificado de estudio",
+    ],
+  },
+
+  {
+    id: "desarrollo-software",
+    title: "Desarrollo de Software",
+
+    icon: softwareIcon,
+    image: softwareFondo,
+
+    degree: "Profesional en Desarrollo de Software",
+
+    description:
+      "El egresado podrá diseñar, desarrollar e implementar soluciones tecnológicas modernas aplicando metodologías ágiles y herramientas actuales.",
+
+    duration: "8 semestres",
+    modality: "Presencial",
+    schedule: "Lunes a viernes mañana, tarde y noche.",
+
+    requirements: [
+      "Fotocopia del documento",
+      "Fotocopia del diploma",
+      "Certificado de estudio",
+    ],
+  },
+
+  {
+    id: "comercio-internacional",
+    title: "Comercio Internacional",
+
+    icon: comercioIcon,
+    image: comercioFondo,
+
+    degree: "Profesional en Comercio Internacional",
+
+    description:
+      "El egresado podrá gestionar operaciones internacionales, analizar mercados globales y desarrollar estrategias de exportación e importación.",
+
+    duration: "8 semestres",
+    modality: "Presencial",
+    schedule: "Lunes a viernes mañana, tarde y noche.",
+
+    requirements: [
+      "Fotocopia del documento",
+      "Fotocopia del diploma",
+      "Certificado de estudio",
+    ],
+  },
+
+  {
+    id: "seguridad-laboral",
+    title: "Seguridad Laboral",
+
+    icon: seguridadIcon,
+    image: seguridadFondo,
+
+    degree: "Profesional en Seguridad Laboral",
+
+    description:
+      "El egresado podrá identificar riesgos laborales e implementar programas de seguridad y salud en el trabajo.",
+
+    duration: "8 semestres",
+    modality: "Presencial",
+    schedule: "Lunes a viernes mañana, tarde y noche.",
+
+    requirements: [
+      "Fotocopia del documento",
+      "Fotocopia del diploma",
+      "Certificado de estudio",
+    ],
+  },
+
+  {
+    id: "sistemas-informaticos",
+    title: "Sistemas Informáticos",
+
+    icon: sistemasIcon,
+    image: sistemasFondo,
+
+    degree: "Profesional en Sistemas Informáticos",
+
+    description:
+      "El egresado podrá diseñar, implementar y administrar sistemas informáticos eficientes y seguros.",
+
+    duration: "8 semestres",
+    modality: "Presencial",
+    schedule: "Lunes a viernes mañana, tarde y noche.",
+
+    requirements: [
+      "Fotocopia del documento",
+      "Fotocopia del diploma",
+      "Certificado de estudio",
+    ],
+  },
+
+  {
+    id: "produccion-eventos",
+    title: "Producción de Eventos",
+
+    icon: eventosIcon,
+    image: eventosFondo,
+
+    degree: "Profesional en Producción de Eventos",
+
+    description:
+      "El egresado podrá planificar, organizar y ejecutar eventos gestionando recursos y estrategias de marketing.",
+
+    duration: "8 semestres",
+    modality: "Presencial",
+    schedule: "Lunes a viernes mañana, tarde y noche.",
+
+    requirements: [
+      "Fotocopia del documento",
+      "Fotocopia del diploma",
+      "Certificado de estudio",
+    ],
+  },
+];

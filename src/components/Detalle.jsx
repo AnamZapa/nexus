@@ -1,71 +1,71 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import { careers } from "../data/career";
+import "../styles/career.css";
 
-function Detalle ({ career }) {
+function Detalle() {
+
+  const { id } = useParams();
+
+  const career = careers.find(
+    (c) => c.id === id
+  );
+
+  if (!career) {
+    return <h2>Programa no encontrado</h2>;
+  }
+
   return (
-    <div className="career-container">
 
-      <h1 className="career-title">
-        {career.title}
-      </h1>
+    <div
+      className="career-page"
+      style={{ backgroundImage: `url(${career.image})` }}
+    >
 
-      <div className="career-image-container">
-        <img
-          src={career.image}
-          alt={career.title}
-          className="career-image"
-        />
-      </div>
+      <div className="career-container">
 
-      <h2 className="section-title">
-        Título Otorgado
-      </h2>
+        <h1 className="career-title">
+          {career.title}
+        </h1>
 
-      <p className="career-text">
-        {career.degree}
-      </p>
+        <div className="career-image-container">
+          <img
+            src={career.image}
+            alt={career.title}
+            className="career-image"
+          />
+        </div>
 
-      <h2 className="section-title">
-        Presentación del programa
-      </h2>
+        <h2 className="section-title">Título Otorgado</h2>
+        <p>{career.degree}</p>
 
-      <p className="career-description">
-        {career.description}
-      </p>
+        <h2 className="section-title">Presentación del programa</h2>
+        <p>{career.description}</p>
 
-      <ul className="career-info">
-        <li>
-          <strong>Duración:</strong> {career.duration}
-        </li>
+        <ul>
+          <li><strong>Duración:</strong> {career.duration}</li>
+          <li><strong>Modalidad:</strong> {career.modality}</li>
+          <li><strong>Jornada:</strong> {career.schedule}</li>
+        </ul>
 
-        <li>
-          <strong>Modalidad:</strong> {career.modality}
-        </li>
+        <h2 className="section-title">Requisitos</h2>
 
-        <li>
-          <strong>Jornada:</strong> {career.schedule}
-        </li>
-      </ul>
+        <ul>
+          {career.requirements.map((req, index) => (
+            <li key={index}>{req}</li>
+          ))}
+        </ul>
 
-      <h2 className="section-title">
-        Requisitos
-      </h2>
+        <div style={{marginTop:"30px"}}>
+          <Link to="/services" className="btn-general">
+            Volver
+          </Link>
 
-      <ul className="requirements-list">
-        {career.requirements.map((req, index) => (
-          <li key={index}>{req}</li>
-        ))}
-      </ul>
-
-      <div className="buttons-container">
-
-        <button className="btn">
-          Regresar al Menú Principal
-        </button>
-
-        <button className="btn">
-          Formulario de Inscripción
-        </button>
+          <Link to="/admisiones" className="btn-general primary">
+          Inscribirme
+          </Link>
+          
+        </div>
 
       </div>
 

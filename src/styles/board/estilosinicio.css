@@ -18,23 +18,23 @@ body {
 }
 
 .footer-nexus {
-    background-color: #050505; /* Un negro casi puro */
+    background-color: #050505; 
     color: #ffffff;
-    padding: 15px 0; /* Menos alto para que sea sutil */
+    padding: 15px 0; 
     width: 100%;
-    border-top: 1px solid #1a1a1a; /* Separación elegante */
+    border-top: 1px solid #1a1a1a; 
     position: relative;
     z-index: 10;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-around; /* Distribuye los elementos a lo largo */
+    justify-content: space-around; 
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    flex-wrap: wrap; /* Por si se ve en celular */
+    flex-wrap: wrap; 
 }
 
 .footer-item {
@@ -45,7 +45,6 @@ body {
     opacity: 0.7;
 }
 
-/* El toque cian de Nexus */
 .footer-item i {
     color: #00d2ff; 
     font-size: 1rem;
@@ -56,7 +55,6 @@ body {
     opacity: 0.4;
 }
 
-/* Efecto al pasar el mouse */
 .footer-item:hover {
     opacity: 1;
     color: #00d2ff;

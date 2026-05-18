@@ -10,13 +10,11 @@ function App() {
       <div className="page-wrapper">
         <Navbar />
 
-        {/* El contenido principal que ya armamos con el array */}
-
         <AppRoutes />
+
         <Footer />
       </div>
     </Router>
-
   );
 }
 

@@ -12,7 +12,6 @@ html, body {
   color: white;
 }
 
-/* Wrapper para mantener el footer abajo */
 .page-wrapper {
   min-height: 100vh;
   display: flex;

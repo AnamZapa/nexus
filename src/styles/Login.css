@@ -10,19 +10,18 @@ body, html {
 }
 
 .fondo {
-  /* Mantenemos tu fondo pero aseguramos que centre todo sin importar el tamaño */
   background: radial-gradient(#0f2a43, #000);
   background-image: url(/src/assets/Imagenes/Fondo\ Página.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;    /* Centra verticalmente para que no tape el navbar */
-  justify-content: center; /* Centra horizontalmente */
+  align-items: center;   
+  justify-content: center; 
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  padding-top: 60px;      /* Espacio de respeto para el Navbar */
+  padding-top: 60px;      
 }
 
 /* Navbar */
@@ -45,15 +44,15 @@ body, html {
   width: 250px;
 }
 
-/* CONTENEDOR LOGIN - Ajustado para ser más pequeño */
+
 .contenedor-login {
   background-color: #fff;
   width: 90%;
-  max-width: 340px;       /* Lo bajamos de 400px a 360px para que se vea más fino */
+  max-width: 340px;      
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-  padding-bottom: 15px;   /* Un poquito más de espacio al final */
+  padding-bottom: 15px;   
   transition: 0.3s ease;
 }
 
@@ -62,11 +61,11 @@ body, html {
   background-color: #0b1f3a;
   color: white;
   text-align: center;
-  padding: 15px 10px;    /* Reducimos de 30px a 20px para que no sea tan largo */
+  padding: 15px 10px;    
 }
 
 .logo-img {
-  width: 100px;          /* Lo bajamos de 200px a 140px. Este era el culpable del largo */
+  width: 100px;          
   height: auto;
   vertical-align: middle;
   margin-bottom: 5px;
@@ -88,16 +87,15 @@ body, html {
   opacity: 0.9;
 }
 
-/* SELECTOR - Mantenemos tus botones con buen espacio */
 .selector {
   display: flex;
   justify-content: center;
   margin: 15px;
-  gap: 8px;             /* Un pelo más de espacio entre botones */
+  gap: 8px;             
 }
 
 .selector button {
-  padding: 10px 15px;    /* Mantenemos tu padding original */
+  padding: 10px 15px;    
   flex: 1;
   border: 2px solid #0b1f3a;
   background-color: white;
@@ -113,13 +111,12 @@ body, html {
   color: white;
 }
 
-/* FORMULARIO - Intacto */
 form {
-  padding: 0 20px;       /* Un poco más de aire a los lados */
+  padding: 0 20px;       
 }
 
 form input {
-  padding: 8px 10px;     /* Inputs más delgados */
+  padding: 8px 10px;     
   margin-bottom: 8px;
   font-size: 13px;
 }
@@ -133,11 +130,10 @@ form input {
   font-size: 14px;
 }
 
-/* BOTONES DE ABAJO - Con el espacio que querías */
 .botones {
   display: flex;
   justify-content: space-between;
-  gap: 12px;             /* Espacio para que no se vean pegados */
+  gap: 12px;             
   margin-top: 15px;
 }
 
@@ -151,7 +147,6 @@ form input {
   transition: background-color 0.3s;
 }
 
-/* Colores por rol - Intactos */
 .contenedor-login.estudiante .botones button {
   background-color: #0b1f3a;
   color: white;
