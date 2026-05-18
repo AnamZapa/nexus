@@ -1,19 +1,40 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import AppRoutes from './routes/AppRoutes';
+import {
+  BrowserRouter as Router,
+  useLocation
+} from "react-router-dom";
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import AppRoutes from "./routes/AppRoutes";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+function Layout() {
+
+  const location = useLocation();
+
+  // Rutas donde NO quieres navbar/footer
+  const isDashboard =
+    location.pathname === "/dashboard";
+
+  return (
+
+    <div className="page-wrapper">
+
+      {!isDashboard && <Navbar />}
+
+      <AppRoutes />
+
+      {!isDashboard && <Footer />}
+
+    </div>
+  );
+}
 
 function App() {
+
   return (
     <Router>
-      <div className="page-wrapper">
-        <Navbar />
-
-        <AppRoutes />
-
-        <Footer />
-      </div>
+      <Layout />
     </Router>
   );
 }
