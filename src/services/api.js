@@ -1,10 +1,10 @@
 // src/services/api.js
 
-const API_URL = "http://localhost:3000"; // cambia luego si tienes backend
+const API_URL = "http://localhost:8080/api";
 
 export const endpoints = {
-  login: "/login",
-  services: "/services",
+  login: "/usuarios",
+  inscripcion: "/inscripciones",
 };
 
 export const apiFetch = async (endpoint, options = {}) => {
