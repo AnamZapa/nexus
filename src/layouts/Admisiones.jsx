@@ -1,56 +1,58 @@
 // src/layouts/Admisiones.jsx
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { successAlert, errorAlert } from "../helpers/alerts";
 import { apiFetch, endpoints } from "../services/api";
 import { careers } from "../data/career";
+import "../styles/Login.css";
+
+const INITIAL_FORM = {
+  tipoDoc: "",
+  numeroDoc: "",
+  nombres: "",
+  apellidos: "",
+  email: "",
+  telefono: "",
+  carrera: "",
+};
 
 export default function Admisiones() {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
   const [form, setForm] = useState({
-    tipoDoc: "",
-    numeroDoc: "",
-    nombres: "",
-    apellidos: "",
-    email: "",
-    telefono: "",
-    carrera: "",
+    ...INITIAL_FORM,
+    carrera: searchParams.get("carrera") ?? "",
   });
 
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
+
+  const handleReset = () => setForm(INITIAL_FORM);
+
+  const isFormValid = () => Object.values(form).every((v) => v.trim() !== "");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validación básica
-    if (
-      !form.tipoDoc ||
-      !form.numeroDoc ||
-      !form.nombres ||
-      !form.apellidos ||
-      !form.email ||
-      !form.telefono ||
-      !form.carrera
-    ) {
+    if (!isFormValid()) {
       errorAlert("Por favor completa todos los campos.");
       return;
     }
 
     try {
       setLoading(true);
-
       await apiFetch(endpoints.inscripcion, {
         method: "POST",
         body: JSON.stringify(form),
       });
-
       successAlert("¡Inscripción realizada con éxito! Pronto nos comunicaremos contigo.");
+      handleReset();
       navigate("/");
     } catch (error) {
       errorAlert("Ocurrió un error al enviar tu inscripción. Intenta de nuevo.");
@@ -62,105 +64,79 @@ export default function Admisiones() {
 
   return (
     <div className="fondo">
-      <div className="form-card">
-        <div className="form-header">
-          <span className="logo-text">🛡 NEXUS</span>
+      <div className="contenedor-login" style={{ maxWidth: "500px" }}>
+
+        <div className="encabezado">
+          <div className="logo">🛡 NEXUS</div>
           <h2>Formulario de Inscripción</h2>
           <p>Completa tus datos para inscribirte en un programa académico</p>
         </div>
 
-        <div className="form-body">
+        <form onSubmit={handleSubmit}>
 
-          {/* Tipo y número de documento */}
-          <div className="input-group">
-            <div className="form-field">
-              <label>Tipo de documento</label>
-              <select name="tipoDoc" value={form.tipoDoc} onChange={handleChange}>
-                <option value="">SELECCIONE</option>
-                <option value="CC">Cédula de ciudadanía</option>
-                <option value="CE">Cédula de extranjería</option>
-                <option value="TI">Tarjeta de identidad</option>
-              </select>
-            </div>
-            <div className="form-field">
-              <label>Número de documento</label>
-              <input
-                name="numeroDoc"
-                placeholder="INGRESA TU DOCUMENTO"
-                value={form.numeroDoc}
-                onChange={handleChange}
-              />
-            </div>
+          <select name="tipoDoc" value={form.tipoDoc} onChange={handleChange}
+            style={{ width: "100%", padding: "10px", borderRadius: "10px", border: "1px solid #ccc", marginBottom: "12px", fontSize: "14px" }}>
+            <option value="">TIPO DE DOCUMENTO</option>
+            <option value="CC">Cédula de ciudadanía</option>
+            <option value="CE">Cédula de extranjería</option>
+            <option value="TI">Tarjeta de identidad</option>
+          </select>
+
+          <input
+            name="numeroDoc"
+            placeholder="NÚMERO DE DOCUMENTO"
+            value={form.numeroDoc}
+            onChange={handleChange}
+          />
+
+          <input
+            name="nombres"
+            placeholder="NOMBRES"
+            value={form.nombres}
+            onChange={handleChange}
+          />
+
+          <input
+            name="apellidos"
+            placeholder="APELLIDOS"
+            value={form.apellidos}
+            onChange={handleChange}
+          />
+
+          <input
+            name="email"
+            type="email"
+            placeholder="CORREO ELECTRÓNICO"
+            value={form.email}
+            onChange={handleChange}
+          />
+
+          <input
+            name="telefono"
+            type="tel"
+            placeholder="TELÉFONO / CELULAR"
+            value={form.telefono}
+            onChange={handleChange}
+          />
+
+          <select name="carrera" value={form.carrera} onChange={handleChange}
+            style={{ width: "100%", padding: "10px", borderRadius: "10px", border: "1px solid #ccc", marginBottom: "12px", fontSize: "14px" }}>
+            <option value="">PROGRAMA ACADÉMICO</option>
+            {careers.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.title}
+              </option>
+            ))}
+          </select>
+
+          <div className="botones">
+            <button type="submit" disabled={loading}>
+              {loading ? "Enviando..." : "Enviar Inscripción"}
+            </button>
           </div>
 
-          {/* Nombres y apellidos */}
-          <div className="input-group">
-            <div className="form-field">
-              <label>Nombres</label>
-              <input
-                name="nombres"
-                placeholder="INGRESE SUS NOMBRES"
-                value={form.nombres}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-field">
-              <label>Apellidos</label>
-              <input
-                name="apellidos"
-                placeholder="INGRESE SUS APELLIDOS"
-                value={form.apellidos}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
+        </form>
 
-          {/* Email y teléfono */}
-          <div className="input-group">
-            <div className="form-field">
-              <label>Correo electrónico</label>
-              <input
-                name="email"
-                type="email"
-                placeholder="INGRESE SU EMAIL"
-                value={form.email}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-field">
-              <label>Teléfono / Celular</label>
-              <input
-                name="telefono"
-                type="tel"
-                placeholder="INGRESE SU TELÉFONO"
-                value={form.telefono}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-
-          {/* Carrera */}
-          <div className="form-field">
-            <label>Programa académico de interés</label>
-            <select name="carrera" value={form.carrera} onChange={handleChange}>
-              <option value="">SELECCIONE UN PROGRAMA</option>
-              {careers.map((c) => (
-                <option key={c.id} value={c.id}>
-                  {c.title}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <button
-            className="btn-registrar"
-            onClick={handleSubmit}
-            disabled={loading}
-          >
-            {loading ? "Enviando..." : "Enviar Inscripción"}
-          </button>
-
-        </div>
       </div>
     </div>
   );

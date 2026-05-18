@@ -61,10 +61,9 @@ function Detalle() {
             Volver
           </Link>
 
-          <Link to="/admisiones" className="btn-general primary">
-          Inscribirme
+          <Link to={`/admisiones?carrera=${career.id}`} className="btn-general primary">
+            Inscribirme
           </Link>
-          
         </div>
 
       </div>
