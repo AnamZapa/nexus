@@ -3,12 +3,12 @@
 const API_URL = "http://localhost:8080/api";
 
 export const endpoints = {
-  // Solo la parte final, sin la URL completa
   login: "/usuarios",
+  registro: "/usuarios",
+  inscripcion: "/inscripciones",
 };
 
 export const apiFetch = async (endpoint, options = {}) => {
-  // Aquí se junta http://localhost:8080/api con /usuarios
   const response = await fetch(`${API_URL}${endpoint}`, {
     headers: {
       "Content-Type": "application/json",

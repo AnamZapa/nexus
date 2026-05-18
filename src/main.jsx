@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './index.css'
 import './styles/estilos.css'
 import './styles/board/estilosinicio.css'
-import './styles/login.css'
+import './styles/Login.css'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

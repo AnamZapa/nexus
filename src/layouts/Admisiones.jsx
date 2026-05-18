@@ -1,25 +1,32 @@
-// src/layouts/Register.jsx
+// src/layouts/Admisiones.jsx
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { successAlert, errorAlert } from "../helpers/alerts";
 import { apiFetch, endpoints } from "../services/api";
+import { careers } from "../data/career";
 import "../styles/Login.css";
 import logoNexus from "../assets/imagenes/logo nexus blanco-01.png";
 
 const INITIAL_FORM = {
   tipoDoc: "",
   numeroDoc: "",
-  email: "",
   nombres: "",
   apellidos: "",
-  contrasena: "",
-  confirmar: "",
+  email: "",
+  telefono: "",
+  carrera: "",
 };
 
-export default function Register() {
+export default function Admisiones() {
   const navigate = useNavigate();
-  const [form, setForm] = useState(INITIAL_FORM);
+  const [searchParams] = useSearchParams();
+
+  const [form, setForm] = useState({
+    ...INITIAL_FORM,
+    carrera: searchParams.get("carrera") ?? "",
+  });
+
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -39,31 +46,17 @@ export default function Register() {
       return;
     }
 
-    if (form.contrasena !== form.confirmar) {
-      errorAlert("Las contraseñas no coinciden.");
-      return;
-    }
-
     try {
       setLoading(true);
-
-      await apiFetch(endpoints.registro, {
+      await apiFetch(endpoints.inscripcion, {
         method: "POST",
-        body: JSON.stringify({
-          tipoDoc: form.tipoDoc,
-          numeroDoc: form.numeroDoc,
-          email: form.email,
-          nombres: form.nombres,
-          apellidos: form.apellidos,
-          contrasena: form.contrasena,
-        }),
+        body: JSON.stringify(form),
       });
-
-      successAlert("¡Cuenta creada exitosamente!");
+      successAlert("¡Inscripción realizada con éxito! Pronto nos comunicaremos contigo.");
       handleReset();
-      navigate("/login");
+      navigate("/");
     } catch (error) {
-      errorAlert("Error al crear la cuenta. Intenta de nuevo.");
+      errorAlert("Ocurrió un error al enviar tu inscripción. Intenta de nuevo.");
       console.error(error);
     } finally {
       setLoading(false);
@@ -75,9 +68,9 @@ export default function Register() {
       <div className="contenedor-login" style={{ maxWidth: "500px" }}>
 
         <div className="encabezado">
-          <img src={logoNexus} alt="Logo Nexus" className="logo-img" />
-          <h2>Registro de Aspirante</h2>
-          <p>Ingresa tu información</p>
+            <img src={logoNexus} alt="Logo Nexus" className="logo-img" />
+            <h2>Formulario de Inscripción</h2>
+            <p>Completa tus datos para inscribirte en un programa académico</p>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -98,14 +91,6 @@ export default function Register() {
           />
 
           <input
-            name="email"
-            type="email"
-            placeholder="CORREO ELECTRÓNICO"
-            value={form.email}
-            onChange={handleChange}
-          />
-
-          <input
             name="nombres"
             placeholder="NOMBRES"
             value={form.nombres}
@@ -120,24 +105,34 @@ export default function Register() {
           />
 
           <input
-            name="contrasena"
-            type="password"
-            placeholder="CONTRASEÑA"
-            value={form.contrasena}
+            name="email"
+            type="email"
+            placeholder="CORREO ELECTRÓNICO"
+            value={form.email}
             onChange={handleChange}
           />
 
           <input
-            name="confirmar"
-            type="password"
-            placeholder="REPITA SU CONTRASEÑA"
-            value={form.confirmar}
+            name="telefono"
+            type="tel"
+            placeholder="TELÉFONO / CELULAR"
+            value={form.telefono}
             onChange={handleChange}
           />
 
+          <select name="carrera" value={form.carrera} onChange={handleChange}
+            style={{ width: "100%", padding: "10px", borderRadius: "10px", border: "1px solid #ccc", marginBottom: "12px", fontSize: "14px" }}>
+            <option value="">PROGRAMA ACADÉMICO</option>
+            {careers.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.title}
+              </option>
+            ))}
+          </select>
+
           <div className="botones">
             <button type="submit" disabled={loading}>
-              {loading ? "Registrando..." : "Registrarme"}
+              {loading ? "Enviando..." : "Enviar Inscripción"}
             </button>
           </div>
 
