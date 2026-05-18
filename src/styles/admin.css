@@ -1,0 +1,58 @@
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.sidebar {
+  width: 260px;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  background: #1e293b;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.admin-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.admin-card h3 {
+  margin-bottom: 10px;
+}
