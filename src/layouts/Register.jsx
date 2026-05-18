@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { successAlert, errorAlert } from "../helpers/alerts";
 import { apiFetch, endpoints } from "../services/api";
 import "../styles/Login.css";
+import logoNexus from "../assets/imagenes/logo nexus blanco-01.png";
 
 const INITIAL_FORM = {
   tipoDoc: "",
@@ -74,7 +75,7 @@ export default function Register() {
       <div className="contenedor-login" style={{ maxWidth: "500px" }}>
 
         <div className="encabezado">
-          <div className="logo">🛡 NEXUS</div>
+          <img src={logoNexus} alt="Logo Nexus" className="logo-img" />
           <h2>Registro de Aspirante</h2>
           <p>Ingresa tu información</p>
         </div>

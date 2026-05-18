@@ -6,6 +6,7 @@ import { successAlert, errorAlert } from "../helpers/alerts";
 import { apiFetch, endpoints } from "../services/api";
 import { careers } from "../data/career";
 import "../styles/Login.css";
+import logoNexus from "../assets/imagenes/logo nexus blanco-01.png";
 
 const INITIAL_FORM = {
   tipoDoc: "",
@@ -67,9 +68,9 @@ export default function Admisiones() {
       <div className="contenedor-login" style={{ maxWidth: "500px" }}>
 
         <div className="encabezado">
-          <div className="logo">🛡 NEXUS</div>
-          <h2>Formulario de Inscripción</h2>
-          <p>Completa tus datos para inscribirte en un programa académico</p>
+            <img src={logoNexus} alt="Logo Nexus" className="logo-img" />
+            <h2>Formulario de Inscripción</h2>
+            <p>Completa tus datos para inscribirte en un programa académico</p>
         </div>
 
         <form onSubmit={handleSubmit}>
