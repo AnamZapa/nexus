@@ -1,4 +1,5 @@
 import Sidebar from "../components/admin/Sidebar";
+import { Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
@@ -30,6 +31,8 @@ const Dashboard = () => {
 
         </div>
 
+        {/* Outlet for nested dashboard routes (e.g. /dashboard/postulantes) */}
+        <Outlet />
       </main>
 
     </div>

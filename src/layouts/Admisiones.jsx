@@ -11,6 +11,7 @@ import logoNexus from "../assets/imagenes/logo nexus blanco-01.png";
 const INITIAL_FORM = {
   tipoDoc: "",
   numeroDoc: "",
+  fechaNacimiento: "",
   nombres: "",
   apellidos: "",
   email: "",
@@ -87,6 +88,14 @@ export default function Admisiones() {
             name="numeroDoc"
             placeholder="NÚMERO DE DOCUMENTO"
             value={form.numeroDoc}
+            onChange={handleChange}
+          />
+
+          <input
+            name="fechaNacimiento"
+            type="date"
+            placeholder="FECHA DE NACIMIENTO"
+            value={form.fechaNacimiento}
             onChange={handleChange}
           />
 

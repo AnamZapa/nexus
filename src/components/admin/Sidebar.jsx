@@ -1,50 +1,54 @@
 import {
   FaChartBar,
-  FaUserGraduate,
-  FaCheckCircle,
-  FaTimesCircle,
+    FaUserGraduate,
   FaCog
 } from "react-icons/fa";
 
-import "../../styles/admin.css";
+import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+import "../../styles/sidebar.css";
+
+export default function Sidebar() {
+
   return (
+
     <aside className="sidebar">
 
-      <h2>NEXUS ADMIN</h2>
+      <div className="sidebar-logo">
 
-      <ul>
+        <h2>NEXUS ADMIN</h2>
 
-        <li>
+      </div>
+
+      <nav>
+
+        <Link to="/dashboard">
           <FaChartBar />
           Dashboard
-        </li>
+        </Link>
 
-        <li>
+        <Link to="/dashboard/postulantes">
           <FaUserGraduate />
           Postulantes
-        </li>
+        </Link>
 
-        <li>
-          <FaCheckCircle />
-          Aprobados
-        </li>
+        <Link to="/dashboard/cursos">
+          <FaUserGraduate />
+          Cursos
+        </Link>
 
-        <li>
-          <FaTimesCircle />
-          Rechazados
-        </li>
+        <Link to="/dashboard/docentes">
+          <FaUserGraduate />
+          Docentes
+        </Link>
 
-        <li>
+        <Link to="/dashboard/configuracion">
           <FaCog />
           Configuración
-        </li>
+        </Link>
 
-      </ul>
+      </nav>
 
     </aside>
   );
-};
-
-export default Sidebar;
+}
