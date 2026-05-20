@@ -1,0 +1,120 @@
+.postulantes-content {
+  flex: 1;
+  padding: 40px;
+  background: #f4f7fb;
+  min-height: 100vh;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.top-section h1 {
+  color: #0f172a;
+  font-size: 38px;
+}
+
+.search-box {
+  background: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 320px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.table-container {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.postulantes-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.postulantes-table thead {
+  background: #0f172a;
+  color: white;
+}
+
+.postulantes-table th,
+.postulantes-table td {
+  padding: 18px;
+  text-align: left;
+}
+
+.postulantes-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.postulantes-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.estado {
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.estado.pendiente {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.estado.aprobado {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.estado.rechazado {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.acciones button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.btn-view {
+  background: #3b82f6;
+}
+
+.btn-approve {
+  background: #22c55e;
+}
+
+.btn-reject {
+  background: #ef4444;
+}
+
+.acciones button:hover {
+  transform: scale(1.08);
+}

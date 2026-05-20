@@ -6,7 +6,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import "../../styles/sidebar.css";
+import "../../styles/admin.css";
 
 export default function Sidebar() {
 
