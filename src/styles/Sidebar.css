@@ -1,0 +1,107 @@
+/* ===== SIDEBAR ===== */
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #020617;
+  color: white;
+
+  padding: 30px 20px;
+
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== LOGO ===== */
+
+.sidebar-logo {
+  margin-bottom: 50px;
+}
+
+.sidebar-logo h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+/* ===== NAV ===== */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ===== LINKS ===== */
+
+.sidebar nav a {
+  text-decoration: none;
+
+  color: #cbd5e1;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  border-radius: 12px;
+
+  transition: all 0.3s ease;
+
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ===== HOVER ===== */
+
+.sidebar nav a:hover {
+  background: #0f172a;
+  color: white;
+
+  transform: translateX(4px);
+}
+
+/* ===== ACTIVE LINK ===== */
+
+.sidebar nav a.active {
+  background: linear-gradient(
+    90deg,
+    #06b6d4,
+    #2563eb
+  );
+
+  color: white;
+}
+
+/* ===== ICONOS ===== */
+
+.sidebar nav a svg {
+  font-size: 18px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .sidebar {
+    width: 90px;
+    padding: 20px 10px;
+  }
+
+  .sidebar-logo h2 {
+    display: none;
+  }
+
+  .sidebar nav a {
+    justify-content: center;
+    padding: 14px;
+  }
+
+  .sidebar nav a span {
+    display: none;
+  }
+}

@@ -1,10 +1,5 @@
-import {
-  BrowserRouter as Router,
-  useLocation
-} from "react-router-dom";
-
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -12,25 +7,20 @@ function Layout() {
 
   const location = useLocation();
 
-  // Rutas donde NO quieres navbar/footer
-  const isDashboard =
-    location.pathname === "/dashboard";
+  const isAdmin =
+    location.pathname.startsWith("/dashboard");
 
   return (
 
-    <div className="page-wrapper">
-
-      {!isDashboard && <Navbar />}
-
+    <div>
+      {!isAdmin && <Navbar />}
       <AppRoutes />
-
-      {!isDashboard && <Footer />}
-
+      {!isAdmin && <Footer />}
     </div>
   );
 }
 
-function App() {
+export default function App() {
 
   return (
     <Router>
@@ -38,5 +28,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

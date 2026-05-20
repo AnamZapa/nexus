@@ -5,6 +5,8 @@ import {
     FaSearch
 } from "react-icons/fa";
 
+import "../styles/postulantes.css";
+
 const postulantes = [
     {
         id: 1,
