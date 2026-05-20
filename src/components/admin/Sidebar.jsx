@@ -1,45 +1,86 @@
 import {
   FaChartBar,
   FaUserGraduate,
-  FaCheckCircle,
-  FaTimesCircle,
+  FaBookOpen,
+  FaChalkboardTeacher,
   FaCog
 } from "react-icons/fa";
 
-import "../../styles/Sidebar.css";
+import { NavLink } from "react-router-dom";
 
-const Sidebar = () => {
+import "../../styles/sidebar.css";
+
+export default function Sidebar() {
+
   return (
+
     <aside className="sidebar">
 
-      <h2>NEXUS ADMIN</h2>
+      {/* LOGO */}
 
-      <ul>
+      <div className="sidebar-logo">
 
-        <li>
+        <h2>NEXUS</h2>
+
+      </div>
+
+      {/* MENU */}
+
+      <nav>
+
+        <NavLink
+          to="/dashboard"
+          end
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
           <FaChartBar />
-          Dashboard
-        </li>
+          <span>Dashboard</span>
+        </NavLink>
 
-        <li>
+        <NavLink
+          to="/dashboard/postulantes"
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
           <FaUserGraduate />
-          Postulantes
-        </li>
+          <span>Postulantes</span>
+        </NavLink>
 
-        <li>
-          <FaCheckCircle />
-          Cursos
-        </li>
+        <NavLink
+          to="/dashboard/cursos"
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
+          <FaBookOpen />
+          <span>Cursos</span>
+        </NavLink>
 
-        <li>
-          <FaTimesCircle />
-          Docentes
-        </li>
+        <NavLink
+          to="/dashboard/docentes"
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
+          <FaChalkboardTeacher />
+          <span>Docentes</span>
+        </NavLink>
 
-      </ul>
+        <NavLink
+          to="/dashboard/configuracion"
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
+          <FaCog />
+          <span>Configuración</span>
+        </NavLink>
+
+      </nav>
 
     </aside>
   );
-};
-
-export default Sidebar;
+}

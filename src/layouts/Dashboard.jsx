@@ -1,39 +1,36 @@
-import Sidebar from "../components/admin/Sidebar";
+import "../styles/admin.css";
 
-const Dashboard = () => {
+const DashboardHome = () => {
+
   return (
 
-    <div className="admin-container">
+    <div>
 
-      <Sidebar />
+      <h1 className="dashboard-title">
+        Panel Administrativo
+      </h1>
 
-      <main className="dashboard-content">
+      <div className="cards-container">
 
-        <h1>Panel Administrativo</h1>
-
-        <div className="cards-container">
-
-          <div className="admin-card">
-            <h3>Total Postulantes</h3>
-            <p>1250</p>
-          </div>
-
-          <div className="admin-card">
-            <h3>Aprobados</h3>
-            <p>700</p>
-          </div>
-
-          <div className="admin-card">
-            <h3>Pendientes</h3>
-            <p>320</p>
-          </div>
-
+        <div className="admin-card">
+          <h3>Total Postulantes</h3>
+          <p>1250</p>
         </div>
 
-      </main>
+        <div className="admin-card">
+          <h3>Aprobados</h3>
+          <p>700</p>
+        </div>
+
+        <div className="admin-card">
+          <h3>Pendientes</h3>
+          <p>320</p>
+        </div>
+
+      </div>
 
     </div>
   );
 };
 
-export default Dashboard;
+export default DashboardHome;

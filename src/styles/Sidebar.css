@@ -1,41 +1,50 @@
-/* ===== SIDEBAR ===== */
-
 .sidebar {
   width: 260px;
   min-height: 100vh;
-  background: #020617;
+
+  background: linear-gradient(
+    180deg,
+    #020617,
+    #0f172a
+  );
+
   color: white;
 
   padding: 30px 20px;
 
   position: sticky;
   top: 0;
-
-  display: flex;
-  flex-direction: column;
 }
 
-/* ===== LOGO ===== */
+/* LOGO */
 
 .sidebar-logo {
   margin-bottom: 50px;
 }
 
 .sidebar-logo h2 {
-  font-size: 28px;
-  font-weight: 700;
-  color: white;
+  font-size: 34px;
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    #06b6d4,
+    #2563eb
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* ===== NAV ===== */
+/* NAV */
 
 .sidebar nav {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
-/* ===== LINKS ===== */
+/* LINKS */
 
 .sidebar nav a {
   text-decoration: none;
@@ -44,28 +53,30 @@
 
   display: flex;
   align-items: center;
-  gap: 12px;
 
-  padding: 14px 16px;
+  gap: 14px;
 
-  border-radius: 12px;
+  padding: 15px 18px;
 
-  transition: all 0.3s ease;
+  border-radius: 14px;
+
+  transition: 0.3s ease;
 
   font-size: 15px;
   font-weight: 500;
 }
 
-/* ===== HOVER ===== */
+/* HOVER */
 
 .sidebar nav a:hover {
-  background: #0f172a;
+  background: rgba(255,255,255,0.08);
+
   color: white;
 
   transform: translateX(4px);
 }
 
-/* ===== ACTIVE LINK ===== */
+/* ACTIVE */
 
 .sidebar nav a.active {
   background: linear-gradient(
@@ -77,31 +88,8 @@
   color: white;
 }
 
-/* ===== ICONOS ===== */
+/* ICONOS */
 
 .sidebar nav a svg {
   font-size: 18px;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 768px) {
-
-  .sidebar {
-    width: 90px;
-    padding: 20px 10px;
-  }
-
-  .sidebar-logo h2 {
-    display: none;
-  }
-
-  .sidebar nav a {
-    justify-content: center;
-    padding: 14px;
-  }
-
-  .sidebar nav a span {
-    display: none;
-  }
 }
