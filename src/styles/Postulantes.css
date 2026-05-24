@@ -1,20 +1,20 @@
 .postulantes-content {
-  flex: 1;
-  padding: 40px;
-  background: #f4f7fb;
-  min-height: 100vh;
+  width: 100%;
+  padding: 10px 0 0 0;
+  margin: 0;
 }
 
 .top-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .top-section h1 {
+  margin: 0;
   color: #0f172a;
-  font-size: 38px;
+  font-size: 42px;
 }
 
 .search-box {
@@ -40,6 +40,12 @@
   padding: 25px;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 0;
+}
+
+.postulantes-table td {
+  color: #0f172a;
+  font-weight: 500;
 }
 
 .postulantes-table {
@@ -54,12 +60,13 @@
 
 .postulantes-table th,
 .postulantes-table td {
-  padding: 18px;
+  padding: 14px 18px;
   text-align: left;
 }
 
 .postulantes-table tbody tr {
   border-bottom: 1px solid #e5e7eb;
+  height: 70px;
 }
 
 .postulantes-table tbody tr:hover {

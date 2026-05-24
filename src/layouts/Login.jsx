@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-import logoNexus from "../assets/Imagenes/logo nexus blanco-01.png";
-import fondoPantalla from "../assets/Imagenes/Fondo Página.jpeg";
+import logoNexus from "../assets/imagenes/logo nexus blanco-01.png";
+import fondoPantalla from "../assets/imagenes/Fondo Página.jpeg";
 
 // ── Credenciales mock (reemplazar por apiFetch cuando haya BD) ──
 const USUARIOS = [
