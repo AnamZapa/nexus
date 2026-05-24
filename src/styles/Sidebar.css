@@ -19,21 +19,21 @@
 /* LOGO */
 
 .sidebar-logo {
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding: 20px 0;
 }
 
-.sidebar-logo h2 {
-  font-size: 34px;
-  font-weight: 800;
+.sidebar-logo-img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
 
-  background: linear-gradient(
-    90deg,
-    #06b6d4,
-    #2563eb
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.sidebar-logo {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 20px;
 }
 
 /* NAV */

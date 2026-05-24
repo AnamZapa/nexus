@@ -5,10 +5,12 @@ import Services from '../layouts/Services';
 import Login from '../layouts/Login';
 import Register from '../layouts/Register';
 
-import Dashboard from '../layouts/Dashboard';
 import Postulantes from '../layouts/Postulantes';
 
 import Detalle from '../components/Detalle';
+
+import ProtectedRoute from "./ProtectedRoute";
+import DashboardHome from "../layouts/Dashboard";
 
 export default function AppRoutes() {
 
@@ -36,9 +38,13 @@ export default function AppRoutes() {
       />
 
       <Route
-        path="/dashboard"
-        element={<Dashboard />}
-      />
+      path="/dashboard"
+      element={
+      <ProtectedRoute>
+      <DashboardHome />
+      </ProtectedRoute>
+  }
+/>
 
       <Route
         path="/dashboard/postulantes"

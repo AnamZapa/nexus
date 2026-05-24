@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 import { NavLink } from "react-router-dom";
-
+import logoNexus from "../../assets/imagenes/logo nexus blanco-01.png";
 import "../../styles/sidebar.css";
 
 export default function Sidebar() {
@@ -20,7 +20,11 @@ export default function Sidebar() {
 
       <div className="sidebar-logo">
 
-        <h2>NEXUS</h2>
+      <img
+      src={logoNexus}
+      alt="Nexus Logo"
+      className="sidebar-logo-img"
+  />
 
       </div>
 

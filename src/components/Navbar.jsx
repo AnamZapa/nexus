@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoNexus from "../assets/imagenes/logo nexus blanco-01.png";
 
 
 export default function Navbar() {
@@ -8,11 +9,7 @@ export default function Navbar() {
             <div className="container-fluid px-4">
                 {/* Logo */}
                 <Link className="navbar-brand d-flex align-items-center" to="/">
-                    <img
-                        src="/src/assets/Imagenes/logo nexus blanco-01.png"
-                        alt="Logo"
-                        className="logo-icon"
-                    />
+                    <img src={logoNexus} alt="Logo" className="logo-icon" />
                 </Link>
 
                 {/* Botón Hamburguesa para Móvil */}
