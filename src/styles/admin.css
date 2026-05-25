@@ -88,3 +88,78 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ── CSS gráficas */
+ 
+.graficas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+ 
+.grafica-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+ 
+.grafica-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+ 
+.grafica-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+ 
+.grafica-placeholder {
+  padding: 60px 20px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 14px;
+}
+ 
+.grafica-error {
+  padding: 40px 20px;
+  text-align: center;
+  color: #ef4444;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+ 
+.btn-recargar {
+  background: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: #6b7280;
+  cursor: pointer;
+}
+ 
+.btn-recargar:hover {
+  background: #f9fafb;
+}
+ 
+.btn-reintentar {
+  padding: 6px 16px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}

@@ -35,32 +35,21 @@ const postulantes = [
     export default function Postulantes() {
 
     return (
-
         <AdminLayout>
-
             <main className="postulantes-content">
-
                 <div className="top-section">
-
                     <h1>Gestión de Postulantes</h1>
-
                     <div className="search-box">
                         <FaSearch />
-
                         <input
                             type="text"
                             placeholder="Buscar postulante..."
                         />
                     </div>
-
                 </div>
-
                 <div className="table-container">
-
                     <table className="postulantes-table">
-
                         <thead>
-
                             <tr>
                                 <th>ID</th>
                                 <th>Nombre</th>
@@ -69,65 +58,40 @@ const postulantes = [
                                 <th>Estado</th>
                                 <th>Acciones</th>
                             </tr>
-
                         </thead>
-
                         <tbody>
-
                             {postulantes.map((postulante) => (
-
                                 <tr key={postulante.id}>
-
                                     <td>{postulante.id}</td>
-
                                     <td>{postulante.nombre}</td>
-
                                     <td>{postulante.correo}</td>
-
                                     <td>{postulante.carrera}</td>
-
                                     <td>
-
                                         <span
                                             className={`estado ${postulante.estado.toLowerCase()}`}
                                         >
                                             {postulante.estado}
                                         </span>
-
                                     </td>
-
                                     <td>
-
                                         <div className="acciones">
-
                                             <button className="btn-view">
                                                 <FaEye />
                                             </button>
-
                                             <button className="btn-approve">
                                                 <FaCheckCircle />
                                             </button>
-
                                             <button className="btn-reject">
                                                 <FaTimesCircle />
                                             </button>
-
                                         </div>
-
                                     </td>
-
                                 </tr>
-
                             ))}
-
                         </tbody>
-
                     </table>
-
                 </div>
-
             </main>
-
         </AdminLayout>
 
     );
