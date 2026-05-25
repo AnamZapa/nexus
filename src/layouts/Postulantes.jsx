@@ -51,24 +51,11 @@ export default function Postulantes() {
     const [postulanteSeleccionado, setPostulanteSeleccionado] =
         useState(null);
 
-    const [modalCrear, setModalCrear] =
-        useState(false);
-
-    const [nuevoPostulante, setNuevoPostulante] =
-        useState({
-            nombre: "",
-            correo: "",
-            carrera: ""
-        });
-
     // CAMBIAR ESTADO
     const cambiarEstado = (id, nuevoEstado) => {
         const actualizados = postulantes.map((postulante) => {
             if (postulante.id === id) {
-                return {
-                    ...postulante,
-                    estado: nuevoEstado
-                };
+                return { ...postulante, estado: nuevoEstado };
             }
             return postulante;
         });
@@ -87,35 +74,7 @@ export default function Postulantes() {
         setPostulanteSeleccionado(null);
     };
 
-    // AGREGAR POSTULANTE
-    const agregarPostulante = () => {
-
-        if (
-            !nuevoPostulante.nombre ||
-            !nuevoPostulante.correo ||
-            !nuevoPostulante.carrera
-        ) return;
-
-        const nuevo = {
-            id: postulantes.length + 1,
-            nombre: nuevoPostulante.nombre,
-            correo: nuevoPostulante.correo,
-            carrera: nuevoPostulante.carrera,
-            estado: "Pendiente"
-        };
-
-        setPostulantes([...postulantes, nuevo]);
-
-        setNuevoPostulante({
-            nombre: "",
-            correo: "",
-            carrera: ""
-        });
-
-        setModalCrear(false);
-    };
-
-    // 🔥 FILTRO (BUSQUEDA + ESTADO)
+    // FILTRO (BUSQUEDA + ESTADO)
     const postulantesFiltrados = postulantes.filter((p) => {
 
         const coincideBusqueda =
@@ -139,9 +98,8 @@ export default function Postulantes() {
 
                     <h1>Gestión de Postulantes</h1>
 
-                    {/* 🔥 DROPDOWN DE FILTRO */}
+                    {/* DROPDOWN FILTRO */}
                     <div className="filtro-dropdown">
-
                         <select
                             value={filtroEstado}
                             onChange={(e) => setFiltroEstado(e.target.value)}
@@ -151,7 +109,6 @@ export default function Postulantes() {
                             <option value="Aprobado">Aprobados</option>
                             <option value="Rechazado">Rechazados</option>
                         </select>
-
                     </div>
 
                     <div className="search-box">
@@ -241,7 +198,7 @@ export default function Postulantes() {
 
             </main>
 
-            {/* ================= MODAL DETALLE ================= */}
+            {/* MODAL DETALLE */}
             {modalAbierto && postulanteSeleccionado && (
                 <div className="postulante-modal-overlay">
                     <div className="postulante-modal-content">
