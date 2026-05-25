@@ -29,18 +29,15 @@ function GraficaCard({ id, titulo, icono }) {
         <span>{icono} {titulo}</span>
         <button className="btn-recargar" onClick={recargar}>↺ Recargar</button>
       </div>
-
       {cargando && !error && (
         <div className="grafica-placeholder">Generando gráfica...</div>
       )}
-
       {error && (
         <div className="grafica-error">
           ❌ No se pudo cargar. ¿Está corriendo <code>python microservicio.py</code>?
           <button className="btn-reintentar" onClick={recargar}>Reintentar</button>
         </div>
       )}
-
       <img
         src={`${FLASK_URL}/graficas/${id}?t=${ts}`}
         alt={titulo}
@@ -52,22 +49,15 @@ function GraficaCard({ id, titulo, icono }) {
   );
 }
 
-const DashboardHome = () => {
+export default function DashboardHome() {
   return (
     <AdminLayout>
-      <div>
-
-        <h1 className="dashboard-title">Panel Administrativo</h1>
-
-        <div className="graficas-grid">
-          {GRAFICAS.map((g) => (
-            <GraficaCard key={g.id} {...g} />
-          ))}
-        </div>
-
+      <h1 className="admin-titulo">Panel Administrativo</h1>
+      <div className="graficas-grid">
+        {GRAFICAS.map((g) => (
+          <GraficaCard key={g.id} {...g} />
+        ))}
       </div>
     </AdminLayout>
   );
-};
-
-export default DashboardHome;
+}

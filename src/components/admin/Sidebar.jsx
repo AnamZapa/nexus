@@ -3,33 +3,40 @@ import {
   FaUserGraduate,
   FaBookOpen,
   FaChalkboardTeacher,
-  FaCog
+  FaSignOutAlt
 } from "react-icons/fa";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logoNexus from "../../assets/imagenes/logo nexus blanco-01.png";
-import "../../styles/sidebar.css";
+import "../../styles/Sidebar.css";
 
 export default function Sidebar() {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    //  limpiar sesión (ajusta si usas token real)
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+
+    // redirigir a página principal
+    navigate("/");
+  };
 
   return (
 
     <aside className="sidebar">
 
       {/* LOGO */}
-
       <div className="sidebar-logo">
-
-      <img
-      src={logoNexus}
-      alt="Nexus Logo"
-      className="sidebar-logo-img"
-  />
-
+        <img
+          src={logoNexus}
+          alt="Nexus Logo"
+          className="sidebar-logo-img"
+        />
       </div>
 
       {/* MENU */}
-
       <nav>
 
         <NavLink
@@ -73,15 +80,11 @@ export default function Sidebar() {
           <span>Docentes</span>
         </NavLink>
 
-        <NavLink
-          to="/dashboard/configuracion"
-          className={({ isActive }) =>
-            isActive ? "active" : ""
-          }
-        >
-          <FaCog />
-          <span>Configuración</span>
-        </NavLink>
+        {/* CERRAR SESIÓN */}
+        <button className="logout-btn" onClick={handleLogout}>
+          <FaSignOutAlt />
+          <span>Cerrar sesión</span>
+        </button>
 
       </nav>
 

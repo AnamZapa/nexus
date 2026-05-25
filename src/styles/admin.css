@@ -30,6 +30,12 @@
   margin-bottom: 40px;
 }
 
+.admin-titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 28px;
+}
 /* ===== CARDS ===== */
 
 .cards-container {
@@ -163,3 +169,19 @@
   font-size: 13px;
   cursor: pointer;
 }
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.graficas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+}
+
