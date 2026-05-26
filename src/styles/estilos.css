@@ -18,10 +18,15 @@ html, body {
   flex-direction: column;
 }
 
-main {
+
+main:not(.admin-content) {
   flex: 1;
-  text-align: center;
   margin-top: 100px;
+}
+
+.admin-content {
+  text-align: left;
+  margin-top: 0;
 }
 
 /* Navbar */
@@ -175,4 +180,18 @@ footer {
   .search-bar {
     width: 220px;
   }
+}
+/* ===== OVERRIDES PANEL ADMIN ===== */
+.admin-content h1,
+.admin-content h2,
+.admin-content h3 {
+  color: #0f172a;
+  text-align: left;
+}
+
+.admin-content {
+  text-align: left !important;
+  margin-top: 0 !important;
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
 }

@@ -1,21 +1,31 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import AppRoutes from './routes/AppRoutes';
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 
-function App() {
+function Layout() {
+
+  const location = useLocation();
+
+  const isAdmin =
+    location.pathname.startsWith("/dashboard");
+
   return (
-    <Router>
-      <div className="page-wrapper">
-        <Navbar />
 
-        <AppRoutes />
-
-        <Footer />
-      </div>
-    </Router>
+    <div>
+      {!isAdmin && <Navbar />}
+      <AppRoutes />
+      {!isAdmin && <Footer />}
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  );
+}

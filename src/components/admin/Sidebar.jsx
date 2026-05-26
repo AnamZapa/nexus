@@ -1,50 +1,93 @@
 import {
   FaChartBar,
   FaUserGraduate,
-  FaCheckCircle,
-  FaTimesCircle,
-  FaCog
+  FaBookOpen,
+  FaChalkboardTeacher,
+  FaSignOutAlt
 } from "react-icons/fa";
 
-import "../../styles/admin.css";
+import { NavLink, useNavigate } from "react-router-dom";
+import logoNexus from "../../assets/imagenes/logo nexus blanco-01.png";
+import "../../styles/Sidebar.css";
 
-const Sidebar = () => {
+export default function Sidebar() {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    //  limpiar sesión (ajusta si usas token real)
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+
+    // redirigir a página principal
+    navigate("/");
+  };
+
   return (
+
     <aside className="sidebar">
 
-      <h2>NEXUS ADMIN</h2>
+      {/* LOGO */}
+      <div className="sidebar-logo">
+        <img
+          src={logoNexus}
+          alt="Nexus Logo"
+          className="sidebar-logo-img"
+        />
+      </div>
 
-      <ul>
+      {/* MENU */}
+      <nav>
 
-        <li>
+        <NavLink
+          to="/dashboard"
+          end
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
           <FaChartBar />
-          Dashboard
-        </li>
+          <span>Dashboard</span>
+        </NavLink>
 
-        <li>
+        <NavLink
+          to="/dashboard/postulantes"
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
           <FaUserGraduate />
-          Postulantes
-        </li>
+          <span>Postulantes</span>
+        </NavLink>
 
-        <li>
-          <FaCheckCircle />
-          Aprobados
-        </li>
+        <NavLink
+          to="/dashboard/cursos"
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
+          <FaBookOpen />
+          <span>Cursos</span>
+        </NavLink>
 
-        <li>
-          <FaTimesCircle />
-          Rechazados
-        </li>
+        <NavLink
+          to="/dashboard/docentes"
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
+          <FaChalkboardTeacher />
+          <span>Docentes</span>
+        </NavLink>
 
-        <li>
-          <FaCog />
-          Configuración
-        </li>
+        {/* CERRAR SESIÓN */}
+        <button className="logout-btn" onClick={handleLogout}>
+          <FaSignOutAlt />
+          <span>Cerrar sesión</span>
+        </button>
 
-      </ul>
+      </nav>
 
     </aside>
   );
-};
-
-export default Sidebar;
+}

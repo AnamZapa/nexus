@@ -1,39 +1,63 @@
-import Sidebar from "../components/admin/Sidebar";
+import { useState } from "react";
+import AdminLayout from "./AdminLayout";
+import "../styles/admin.css";
 
-const Dashboard = () => {
+const FLASK_URL = "http://localhost:5000";
+
+const GRAFICAS = [
+  { id: "ocupacion",  titulo: "Ocupación de Cursos",             icono: "📊" },
+  { id: "cupos",      titulo: "Cupos Disponibles vs Máximos",    icono: "🪑" },
+  { id: "estados",    titulo: "Estados de Solicitudes",          icono: "📋" },
+  { id: "roles",      titulo: "Usuarios por Rol",                icono: "👥" },
+  { id: "aprobacion", titulo: "Tasa de Aprobación por Programa", icono: "✅" },
+];
+
+function GraficaCard({ id, titulo, icono }) {
+  const [ts, setTs] = useState(Date.now());
+  const [cargando, setCargando] = useState(true);
+  const [error, setError] = useState(false);
+
+  const recargar = () => {
+    setCargando(true);
+    setError(false);
+    setTs(Date.now());
+  };
+
   return (
-
-    <div className="admin-container">
-
-      <Sidebar />
-
-      <main className="dashboard-content">
-
-        <h1>Panel Administrativo</h1>
-
-        <div className="cards-container">
-
-          <div className="admin-card">
-            <h3>Total Postulantes</h3>
-            <p>1250</p>
-          </div>
-
-          <div className="admin-card">
-            <h3>Aprobados</h3>
-            <p>700</p>
-          </div>
-
-          <div className="admin-card">
-            <h3>Pendientes</h3>
-            <p>320</p>
-          </div>
-
+    <div className="grafica-card">
+      <div className="grafica-card-header">
+        <span>{icono} {titulo}</span>
+        <button className="btn-recargar" onClick={recargar}>↺ Recargar</button>
+      </div>
+      {cargando && !error && (
+        <div className="grafica-placeholder">Generando gráfica...</div>
+      )}
+      {error && (
+        <div className="grafica-error">
+          ❌ No se pudo cargar. ¿Está corriendo <code>python microservicio.py</code>?
+          <button className="btn-reintentar" onClick={recargar}>Reintentar</button>
         </div>
-
-      </main>
-
+      )}
+      <img
+        src={`${FLASK_URL}/graficas/${id}?t=${ts}`}
+        alt={titulo}
+        style={{ display: cargando || error ? "none" : "block" }}
+        onLoad={() => setCargando(false)}
+        onError={() => { setCargando(false); setError(true); }}
+      />
     </div>
   );
-};
+}
 
-export default Dashboard;
+export default function DashboardHome() {
+  return (
+    <AdminLayout>
+      <h1 className="admin-titulo">Panel Administrativo</h1>
+      <div className="graficas-grid">
+        {GRAFICAS.map((g) => (
+          <GraficaCard key={g.id} {...g} />
+        ))}
+      </div>
+    </AdminLayout>
+  );
+}

@@ -1,0 +1,88 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: white;
+
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+/* LOGO */
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-logo-img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* NAV */
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* LINKS + BOTÓN LOGOUT */
+.sidebar nav a,
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 15px 18px;
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  text-decoration: none;
+  color: #cbd5e1;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+  width: 100%;
+
+  transition: 0.25s ease;
+}
+
+/* HOVER */
+.sidebar nav a:hover,
+.logout-btn:hover {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  transform: translateX(4px);
+}
+
+/* ACTIVE */
+.sidebar nav a.active {
+  background: linear-gradient(90deg, #06b6d4, #2563eb);
+  color: white;
+}
+
+/* ICONOS */
+.sidebar svg {
+  font-size: 18px;
+}
