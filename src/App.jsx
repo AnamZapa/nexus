@@ -1,23 +1,33 @@
-import { BrowserRouter as Router, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  useLocation
+} from "react-router-dom";
+
 import AppRoutes from "./routes/AppRoutes";
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 
 function Layout() {
 
   const location = useLocation();
 
-  const isAdmin =
-    location.pathname.startsWith("/dashboard");
+  const isDashboard =
+    location.pathname.startsWith("/dashboard") ||
+    location.pathname.startsWith("/student");
 
   return (
 
     <div>
-      {!isAdmin && <Navbar />}
+
+      {!isDashboard && <Navbar />}
+
       <AppRoutes />
-      {!isAdmin && <Footer />}
+
+      {!isDashboard && <Footer />}
+
     </div>
+
   );
 }
 

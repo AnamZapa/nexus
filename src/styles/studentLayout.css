@@ -1,0 +1,17 @@
+.student-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.student-content {
+  flex: 1;
+
+  margin-left: 260px;
+
+  width: calc(100% - 260px);
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
