@@ -106,24 +106,6 @@ export default function StudentDashboard() {
 
                     </div>
 
-                    <div className="student-card">
-
-                        <div className="icon-box yellow">
-                            <FaStar />
-                        </div>
-
-                        <div>
-                            <span>Promedio</span>
-
-                            <h3>4.5</h3>
-
-                            <p>
-                                Excelente rendimiento
-                            </p>
-                        </div>
-
-                    </div>
-
                 </div>
 
                 {/* GRID */}
@@ -134,9 +116,17 @@ export default function StudentDashboard() {
 
                     <div className="progress-card">
 
-                        <h2>
-                            Mi progreso académico
-                        </h2>
+                        <div className="progress-title-row">
+
+                            <h2>
+                                Mi progreso académico
+                            </h2>
+
+                            <span className="semester-badge">
+                                Semestre {semestreActual}
+                            </span>
+
+                        </div>
 
                         <div className="progress-info">
 
@@ -146,9 +136,24 @@ export default function StudentDashboard() {
                                     Semestre {semestreActual} de {totalSemestres}
                                 </span>
 
-                                <div className="progress-percentage">
-                                    {Math.round(progreso)}%
+                            </div>
+
+                            <div className="progress-container">
+
+                                <div className="progress-bar">
+
+                                    <div
+                                        className="progress-fill"
+                                        style={{
+                                            width: `${progreso}%`,
+                                        }}
+                                    ></div>
+
                                 </div>
+
+                                <span className="progress-number">
+                                    {Math.round(progreso)}%
+                                </span>
 
                             </div>
 
@@ -171,23 +176,47 @@ export default function StudentDashboard() {
 
                     </div>
 
-                    {/* PRÓXIMA CLASE */}
+                    {/* PROXIMA CLASE */}
 
                     <div className="next-class">
 
-                        <h2>
-                            Próxima clase
-                        </h2>
+                        <div className="next-header">
+
+                            <h2>
+                                Próxima clase
+                            </h2>
+
+                            <div className="calendar-icon">
+                                <FaCalendarAlt />
+                            </div>
+
+                        </div>
 
                         <div className="class-box">
 
-                            <h3>
-                                React Avanzado
-                            </h3>
+                            <div className="class-info">
 
-                            <p>
-                                Aula 204 · 8:00 AM
-                            </p>
+                                <h3>
+                                    React Avanzado
+                                </h3>
+
+                                <p>
+                                    Ingeniería de Software
+                                </p>
+
+                            </div>
+
+                            <div className="class-time">
+
+                                <span>
+                                    8:00 AM
+                                </span>
+
+                                <small>
+                                    Aula 204
+                                </small>
+
+                            </div>
 
                         </div>
 
