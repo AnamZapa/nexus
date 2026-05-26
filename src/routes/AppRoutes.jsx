@@ -8,6 +8,7 @@ import Detalle from "../components/Detalle";
 
 import ProtectedRoute from "./ProtectedRoute";
 import DashboardLayout from "./DashboardLayouts";
+import StudentRoutes from "./StudentRoutes";
 
 export default function AppRoutes() {
   return (
@@ -28,6 +29,15 @@ export default function AppRoutes() {
           </ProtectedRoute>
         }
       />
+      
+      <Route
+  path="/student/*"
+  element={
+    <ProtectedRoute>
+      <StudentRoutes />
+    </ProtectedRoute>
+  }
+/>
     </Routes>
   );
 }

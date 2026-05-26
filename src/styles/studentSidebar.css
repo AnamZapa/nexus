@@ -1,0 +1,82 @@
+.student-sidebar {
+  width: 260px;
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: linear-gradient(
+    180deg,
+    #020617,
+    #0f172a
+  );
+
+  color: white;
+
+  padding: 30px 20px;
+}
+
+.student-logo {
+  margin-bottom: 40px;
+}
+
+.student-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.student-sidebar nav a,
+.student-logout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 15px 18px;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  color: #cbd5e1;
+
+  transition: 0.3s;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.student-sidebar nav a:hover,
+.student-logout:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.student-sidebar nav a.active {
+  background: linear-gradient(
+    90deg,
+    #06b6d4,
+    #2563eb
+  );
+
+  color: white;
+}
+
+.student-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 20px 0;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.student-logo-img {
+  width: 140px;
+  height: auto;
+  object-fit: contain;
+}
