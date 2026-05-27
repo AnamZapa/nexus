@@ -1,0 +1,434 @@
+/* ════════════════════════════════════════
+   STUDENT HORARIO — Estilos
+════════════════════════════════════════ */
+
+.horario-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── TÍTULOS DE SECCIÓN ─────────────────── */
+
+.horario-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.horario-header p {
+  color: #64748b;
+  font-size: 15px;
+  margin: 0;
+}
+
+.horario-section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.horario-section-title h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.section-icon { font-size: 18px; }
+.section-icon.gold   { color: #f59e0b; }
+.section-icon.azul   { color: #2563eb; }
+.section-icon.morado { color: #7c3aed; }
+
+.badge-count {
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* ════════════════════════════════════════
+   SECCIÓN 1 — CARRERA
+════════════════════════════════════════ */
+
+.carrera-card {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 22px;
+  padding: 30px 32px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+.carrera-card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(37,99,235,0.15), transparent 70%);
+  border-radius: 50%;
+}
+
+.carrera-icon-wrap {
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.carrera-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+}
+
+.carrera-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.carrera-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: #06b6d4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carrera-titulo {
+  font-size: 26px;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+}
+
+.carrera-degree {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.carrera-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.chip-gold {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+/* ════════════════════════════════════════
+   SECCIÓN 2 — CURSOS
+════════════════════════════════════════ */
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.curso-card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid;
+  transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.curso-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+}
+
+/* Borde izquierdo por color */
+.borde-azul     { border-color: #2563eb; }
+.borde-verde    { border-color: #16a34a; }
+.borde-morado   { border-color: #7c3aed; }
+.borde-amarillo { border-color: #d97706; }
+.borde-naranja  { border-color: #ea580c; }
+.borde-rojo     { border-color: #dc2626; }
+.borde-celeste  { border-color: #0891b2; }
+.borde-rosa     { border-color: #db2777; }
+
+/* CABECERA DEL CURSO */
+
+.curso-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.curso-nombre {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.creditos-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* DÍAS */
+
+.curso-dias {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.dia-chip {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* DETALLES */
+
+.curso-detalle-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #475569;
+}
+
+.det-icon {
+  color: #94a3b8;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════
+   SECCIÓN 3 — CRONOGRAMA
+════════════════════════════════════════ */
+
+.cronograma-wrapper {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+}
+
+.cronograma-tabla {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.crono-th {
+  padding: 16px 14px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  text-align: left;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.crono-td {
+  padding: 14px 10px;
+  vertical-align: top;
+  width: 20%;
+  border-right: 1px solid #f1f5f9;
+}
+
+.crono-td:last-child {
+  border-right: none;
+}
+
+.crono-bloque {
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border-left: 4px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.crono-nombre {
+  font-size: 12px;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.crono-hora {
+  font-size: 11px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.crono-aula {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.crono-libre {
+  font-size: 18px;
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* ══════════════════════════════════════════
+   PALETA COMPLETA
+   (chips, badges, cronograma)
+══════════════════════════════════════════ */
+
+/* Chips de días */
+.chip-azul     { background: #dbeafe; color: #1d4ed8; }
+.chip-verde    { background: #dcfce7; color: #15803d; }
+.chip-morado   { background: #ede9fe; color: #6d28d9; }
+.chip-amarillo { background: #fef3c7; color: #b45309; }
+.chip-naranja  { background: #ffedd5; color: #c2410c; }
+.chip-rojo     { background: #fee2e2; color: #dc2626; }
+.chip-celeste  { background: #cffafe; color: #0e7490; }
+.chip-rosa     { background: #fce7f3; color: #be185d; }
+
+/* Badges de créditos */
+.bg-azul     { background: #dbeafe; color: #1d4ed8; }
+.bg-verde    { background: #dcfce7; color: #15803d; }
+.bg-morado   { background: #ede9fe; color: #6d28d9; }
+.bg-amarillo { background: #fef3c7; color: #b45309; }
+.bg-naranja  { background: #ffedd5; color: #c2410c; }
+.bg-rojo     { background: #fee2e2; color: #dc2626; }
+.bg-celeste  { background: #cffafe; color: #0e7490; }
+.bg-rosa     { background: #fce7f3; color: #be185d; }
+
+/* Bloques cronograma */
+.bg-light-azul     { background: #eff6ff; }
+.bg-light-verde    { background: #f0fdf4; }
+.bg-light-morado   { background: #f5f3ff; }
+.bg-light-amarillo { background: #fffbeb; }
+.bg-light-naranja  { background: #fff7ed; }
+.bg-light-rojo     { background: #fef2f2; }
+.bg-light-celeste  { background: #ecfeff; }
+.bg-light-rosa     { background: #fdf2f8; }
+
+/* ════════════════════════════════════════
+   RESPONSIVE — Todos los dispositivos
+════════════════════════════════════════ */
+
+/* ── TABLET (601px a 1024px) ── */
+@media (max-width: 1024px) {
+
+  .cursos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carrera-titulo {
+    font-size: 22px;
+  }
+
+  .carrera-card {
+    padding: 24px;
+  }
+}
+
+/* ── MÓVIL GRANDE (481px a 600px) ── */
+@media (max-width: 600px) {
+
+  .horario-header h1 {
+    font-size: 22px;
+  }
+
+  .carrera-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .carrera-titulo {
+    font-size: 18px;
+  }
+
+  .carrera-chips {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .cursos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cronograma-tabla {
+    min-width: 480px;
+  }
+}
+
+/* ── MÓVIL PEQUEÑO (hasta 480px) ── */
+@media (max-width: 480px) {
+
+  .horario-header h1 {
+    font-size: 20px;
+  }
+
+  .carrera-icon-wrap {
+    width: 70px;
+    height: 70px;
+  }
+
+  .carrera-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .curso-card {
+    padding: 16px;
+  }
+
+  .curso-nombre {
+    font-size: 14px;
+  }
+
+  .cronograma-tabla {
+    min-width: 420px;
+  }
+}
