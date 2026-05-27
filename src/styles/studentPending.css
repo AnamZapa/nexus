@@ -1,0 +1,416 @@
+/* =========================
+   PAGE
+========================= */
+
+.pending-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.pending-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: white;
+  padding: 30px;
+
+  border-radius: 24px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.pending-header h1 {
+  font-size: 34px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.pending-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.status-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #fef3c7;
+  color: #92400e;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.pending-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.pending-card,
+.timeline-card {
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+  transition: 0.3s ease;
+}
+
+.pending-card:hover,
+.timeline-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.main-top span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.main-top h2 {
+  font-size: 32px;
+  color: #0f172a;
+
+  margin-top: 8px;
+
+  word-break: break-word;
+}
+
+/* =========================
+   PROGRESS CIRCLE
+========================= */
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+
+  min-width: 100px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+
+  border: 8px solid #bfdbfe;
+
+  color: #2563eb;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-section {
+  margin-bottom: 30px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #475569;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+
+  background: #e2e8f0;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 75%;
+  height: 100%;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #2563eb,
+    #60a5fa
+  );
+}
+
+/* =========================
+   EXTRA INFO
+========================= */
+
+.extra-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.extra-info div {
+  flex: 1;
+  min-width: 250px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #f8fafc;
+
+  padding: 16px 18px;
+
+  border-radius: 18px;
+}
+
+.extra-info svg {
+  font-size: 18px;
+  color: #2563eb;
+
+  min-width: 18px;
+}
+
+.extra-info span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.extra-info p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+
+  word-break: break-word;
+}
+
+/* =========================
+   NEXT STEP
+========================= */
+
+.next-step h3 {
+  font-size: 26px;
+  color: #0f172a;
+
+  margin-bottom: 25px;
+}
+
+.step-box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 22px;
+
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #eff6ff,
+    #f8fafc
+  );
+}
+
+.step-box svg {
+  font-size: 30px;
+  color: #2563eb;
+
+  min-width: 30px;
+}
+
+.step-box h4 {
+  font-size: 20px;
+  color: #0f172a;
+
+  margin-bottom: 6px;
+
+  word-break: break-word;
+}
+
+.step-box p {
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline-card h2 {
+  font-size: 2.3rem;
+  color: #071739;
+
+  margin-bottom: 40px;
+}
+
+.timeline-list {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* LÍNEA VERTICAL */
+
+.timeline-list::before {
+  content: "";
+
+  position: absolute;
+
+  left: 26px;
+  top: 10px;
+
+  width: 3px;
+  height: calc(100% - 20px);
+
+  background: #dbe4f0;
+}
+
+/* ITEM */
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+/* ICONO */
+
+.timeline-icon {
+  width: 54px;
+  height: 54px;
+
+  min-width: 54px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.1rem;
+  font-weight: bold;
+
+  background: #e2e8f0;
+  color: #64748b;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* TEXTO */
+
+.timeline-item h4 {
+  font-size: 1.8rem;
+  color: #071739;
+
+  margin-bottom: 6px;
+}
+
+.timeline-item p {
+  color: #64748b;
+  font-size: 1rem;
+
+  margin: 0;
+}
+
+/* COMPLETADO */
+
+.timeline-item.completed .timeline-icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* ACTIVO */
+
+.timeline-item.active .timeline-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+  .pending-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .pending-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .main-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .progress-circle {
+    width: 85px;
+    height: 85px;
+
+    font-size: 22px;
+  }
+
+  .timeline-item h4 {
+    font-size: 1.3rem;
+  }
+
+}

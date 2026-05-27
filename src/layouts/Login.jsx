@@ -9,17 +9,86 @@ const USUARIOS = [
   {
     email: "admin@univ.edu",
     password: "admin123",
+
     rol: "admin",
+
     nombre: "Administrador",
   },
 
-  // 👇 ESTUDIANTE APROBADO
+  // ── ESTUDIANTE APROBADO ──
   {
     email: "estudiante@univ.edu",
     password: "123456",
+
     rol: "estudiante",
+
     nombre: "Ana Gómez",
+
     estado: "Aprobado",
+
+    telefono: "3001234567",
+
+    documento: "123456789",
+
+    programa: "Ingeniería de Software",
+
+    semestre: 2,
+
+    promedio: 4.5,
+
+    codigo: "NX20260045",
+
+    correoInstitucional:
+      "ana.gomez@nexus.edu.co",
+
+    fechaInscripcion:
+      "12 Mayo 2026",
+
+    creditos: 32,
+
+    materias: 8,
+  },
+
+  // ── ESTUDIANTE PENDIENTE ──
+  {
+    email: "pendiente@univ.edu",
+    password: "123456",
+
+    rol: "estudiante",
+
+    nombre: "Laura Martínez",
+
+    estado: "Pendiente",
+
+    telefono: "3019876543",
+
+    documento: "987654321",
+
+    programa: "Arte culinario",
+
+    fechaInscripcion:
+      "03 Junio 2026",
+  },
+
+  // ── ESTUDIANTE RECHAZADO ──
+  {
+    email: "rechazado@univ.edu",
+    password: "123456",
+
+    rol: "estudiante",
+
+    nombre: "Carlos Pérez",
+
+    estado: "Rechazado",
+
+    telefono: "3154567890",
+
+    documento: "456789123",
+
+    programa: "Producción de eventos",
+
+    fechaInscripcion:
+      "15 Abril 2026",
   },
 ];
 
@@ -28,11 +97,15 @@ export default function Login() {
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
-  const [error, setError] = useState("");
+  const [password, setPassword] =
+    useState("");
 
-  const [rol, setRol] = useState("admin");
+  const [error, setError] =
+    useState("");
+
+  const [rol, setRol] =
+    useState("admin");
 
   const handleSubmit = async (e) => {
 
@@ -51,9 +124,12 @@ export default function Login() {
     if (usuario) {
 
       // Guardar sesión
-      localStorage.setItem("token", "mock-token");
+      localStorage.setItem(
+        "token",
+        "mock-token"
+      );
 
-      // 👇 IMPORTANTE: guardar como "user"
+      // Guardar usuario
       localStorage.setItem(
         "user",
         JSON.stringify(usuario)
@@ -72,7 +148,9 @@ export default function Login() {
 
     } else {
 
-      setError("Credenciales incorrectas.");
+      setError(
+        "Credenciales incorrectas."
+      );
 
     }
   };
@@ -82,7 +160,8 @@ export default function Login() {
     <div
       className="fondo"
       style={{
-        backgroundImage: `radial-gradient(circle, rgba(15, 42, 67, 0.8), #000), url(${fondoPantalla})`,
+        backgroundImage:
+          `radial-gradient(circle, rgba(15, 42, 67, 0.8), #000), url(${fondoPantalla})`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         overflow: "hidden",
@@ -95,14 +174,18 @@ export default function Login() {
         <div className="encabezado">
 
           <Link className="logo" to="/">
+
             <img
               src={logoNexus}
               alt="Logo Nexus"
               className="logo-img"
             />
+
           </Link>
 
-          <h2>Portal Admisiones</h2>
+          <h2>
+            Portal Admisiones
+          </h2>
 
           <p>
             Bienvenido al sistema de acceso universitario
@@ -115,16 +198,28 @@ export default function Login() {
 
           <button
             type="button"
-            className={rol === "estudiante" ? "activo" : ""}
-            onClick={() => setRol("estudiante")}
+            className={
+              rol === "estudiante"
+                ? "activo"
+                : ""
+            }
+            onClick={() =>
+              setRol("estudiante")
+            }
           >
             Estudiante
           </button>
 
           <button
             type="button"
-            className={rol === "admin" ? "activo" : ""}
-            onClick={() => setRol("admin")}
+            className={
+              rol === "admin"
+                ? "activo"
+                : ""
+            }
+            onClick={() =>
+              setRol("admin")
+            }
           >
             Personal Administrativo
           </button>
@@ -143,7 +238,9 @@ export default function Login() {
             id="email"
             placeholder="Ingrese su correo electrónico"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) =>
+              setEmail(e.target.value)
+            }
             required
           />
 
@@ -156,7 +253,9 @@ export default function Login() {
             id="password"
             placeholder="Ingrese su contraseña"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) =>
+              setPassword(e.target.value)
+            }
             required
           />
 
@@ -182,7 +281,9 @@ export default function Login() {
 
             <button
               type="button"
-              onClick={() => navigate("/register")}
+              onClick={() =>
+                navigate("/register")
+              }
             >
               Crear cuenta
             </button>
