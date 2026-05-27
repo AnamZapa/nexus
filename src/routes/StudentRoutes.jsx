@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 
 import StudentDashboard from "../layouts/student/StudentDashboard";
-import StudentProceso from "../layouts/student/StudentProceso";
+import StudentPending from "../layouts/student/StudentPending";
+import StudentProfile from "../layouts/student/StudentProfile";
 import StudentPrograma from "../layouts/student/StudentPrograma";
 import StudentHorario from "../layouts/student/StudentHorario";
 import StudentRejected from "../layouts/student/StudentRejected";
@@ -17,31 +18,80 @@ export default function StudentRoutes() {
 
     <Routes>
 
-      {/* APROBADO */}
-      <Route
-        index
-        element={<StudentDashboard />}
-      />
+      {/* =========================
+          ESTUDIANTE PENDIENTE
+      ========================= */}
 
-      <Route
-        path="programa"
-        element={<StudentPrograma />}
-      />
+      {user?.estado === "Pendiente" && (
+        <>
 
-      <Route
-        path="horario"
-        element={<StudentHorario />}
-      />
+          <Route
+            index
+            element={<StudentPending />}
+          />
 
-      <Route
-        path="proceso"
-        element={<StudentProceso />}
-      />
+          <Route
+            path="perfil"
+            element={<StudentProfile />}
+          />
 
-      <Route
-        path="rechazado"
-        element={<StudentRejected />}
-      />
+        </>
+      )}
+
+      {/* =========================
+          ESTUDIANTE APROBADO
+      ========================= */}
+
+      {user?.estado === "Aprobado" && (
+        <>
+
+          <Route
+            index
+            element={<StudentDashboard />}
+          />
+
+          <Route
+            path="programa"
+            element={<StudentPrograma />}
+          />
+
+          <Route
+            path="horario"
+            element={<StudentHorario />}
+          />
+
+          <Route
+            path="perfil"
+            element={<StudentProfile />}
+          />
+
+        </>
+      )}
+
+      {/* =========================
+          ESTUDIANTE RECHAZADO
+      ========================= */}
+
+      {user?.estado === "Rechazado" && (
+        <>
+
+          <Route
+            index
+            element={<StudentRejected />}
+          />
+
+          <Route
+            path="rechazado"
+            element={<StudentRejected />}
+          />
+
+          <Route
+            path="perfil"
+            element={<StudentProfile />}
+          />
+
+        </>
+      )}
 
     </Routes>
   );

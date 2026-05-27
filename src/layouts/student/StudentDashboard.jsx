@@ -130,41 +130,18 @@ export default function StudentDashboard() {
 
                         <div className="progress-info">
 
-                            <div className="progress-top">
-
-                                <span>
-                                    Semestre {semestreActual} de {totalSemestres}
-                                </span>
-
-                            </div>
-
                             <div className="progress-container">
 
                                 <div className="progress-bar">
-
                                     <div
                                         className="progress-fill"
-                                        style={{
-                                            width: `${progreso}%`,
-                                        }}
+                                        style={{ width: `${progreso}%` }}
                                     ></div>
-
                                 </div>
 
                                 <span className="progress-number">
                                     {Math.round(progreso)}%
                                 </span>
-
-                            </div>
-
-                            <div className="progress-bar">
-
-                                <div
-                                    className="progress-fill"
-                                    style={{
-                                        width: `${progreso}%`,
-                                    }}
-                                ></div>
 
                             </div>
 

@@ -1,9 +1,9 @@
 import {
-    FaHome,
-    FaUserGraduate,
-    FaBook,
-    FaClock,
-    FaSignOutAlt
+  FaHome,
+  FaUserGraduate,
+  FaBook,
+  FaClock,
+  FaSignOutAlt
 } from "react-icons/fa";
 
 import { NavLink, useNavigate } from "react-router-dom";
@@ -13,65 +13,118 @@ import logoNexus from "../../assets/imagenes/logo nexus blanco-01.png";
 
 export default function StudentSidebar() {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleLogout = () => {
+  const user =
+    JSON.parse(localStorage.getItem("user"));
 
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
+  const handleLogout = () => {
 
-        navigate("/");
-    };
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
 
-    return (
+    navigate("/");
+  };
 
-        <aside className="student-sidebar">
+  return (
 
-            <div className="student-logo">
-                <img
-                    src={logoNexus}
-                    alt="Nexus Logo"
-                    className="student-logo-img"
-                />
-            </div>
+    <aside className="student-sidebar">
 
-            <nav>
+      {/* LOGO */}
+      <div className="student-logo">
 
-                {/* DASHBOARD */}
-                <NavLink to="/student" end>
-                    <FaHome />
-                    <span>Dashboard</span>
-                </NavLink>
+        <img
+          src={logoNexus}
+          alt="Nexus Logo"
+          className="student-logo-img"
+        />
 
-                {/* PROCESO */}
-                <NavLink to="/student/proceso">
-                    <FaUserGraduate />
-                    <span>Mi proceso</span>
-                </NavLink>
+      </div>
 
-                {/* PROGRAMA */}
-                <NavLink to="/student/programa">
-                    <FaBook />
-                    <span>Mi programa</span>
-                </NavLink>
+      <nav>
 
-                {/* HORARIO */}
-                <NavLink to="/student/horario">
-                    <FaClock />
-                    <span>Horario</span>
-                </NavLink>
+        {/* =========================
+            ESTADO PENDIENTE
+        ========================= */}
 
-                {/* LOGOUT */}
-                <button
-                    className="student-logout"
-                    onClick={handleLogout}
-                >
-                    <FaSignOutAlt />
-                    <span>Cerrar sesión</span>
-                </button>
+        {user?.estado === "Pendiente" && (
+          <>
 
-            </nav>
+            <NavLink to="/student" end>
+              <FaHome />
+              <span>Dashboard</span>
+            </NavLink>
 
-        </aside>
-    );
+            <NavLink to="/student/perfil">
+              <FaUserGraduate />
+              <span>Mi perfil</span>
+            </NavLink>
+
+          </>
+        )}
+
+        {/* =========================
+            ESTADO APROBADO
+        ========================= */}
+
+        {user?.estado === "Aprobado" && (
+          <>
+
+            <NavLink to="/student" end>
+              <FaHome />
+              <span>Dashboard</span>
+            </NavLink>
+
+            <NavLink to="/student/programa">
+              <FaBook />
+              <span>Mi programa</span>
+            </NavLink>
+
+            <NavLink to="/student/horario">
+              <FaClock />
+              <span>Horario</span>
+            </NavLink>
+
+            <NavLink to="/student/perfil">
+              <FaUserGraduate />
+              <span>Mi perfil</span>
+            </NavLink>
+
+          </>
+        )}
+
+        {/* =========================
+            ESTADO RECHAZADO
+        ========================= */}
+
+        {user?.estado === "Rechazado" && (
+          <>
+
+            <NavLink to="/student/rechazado" end>
+              <FaHome />
+              <span>Resultado</span>
+            </NavLink>
+
+          </>
+        )}
+
+        {/* LOGOUT */}
+
+        <button
+          className="student-logout"
+          onClick={handleLogout}
+        >
+
+          <FaSignOutAlt />
+
+          <span>
+            Cerrar sesión
+          </span>
+
+        </button>
+
+      </nav>
+
+    </aside>
+  );
 }
