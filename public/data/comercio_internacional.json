@@ -1,0 +1,473 @@
+{
+  "id": "comercio_internacional",
+  "name": "Comercio Internacional",
+  "title": "Profesional en Comercio y Negocios Internacionales",
+  "duration": "10 Semestres",
+  "credits": 162,
+  "modality": "Híbrida (Presencial / Virtual)",
+  "costPerSemester": 3900000,
+  "description": "El programa de Comercio Internacional de NEXUS capacita a profesionales para liderar la inserción de las empresas en los mercados mundiales. El plan de estudios integra la gestión logística, las finanzas globales, la legislación aduanera, la investigación de mercados exteriores y las negociaciones interculturales, permitiendo al estudiante estructurar operaciones de importación y exportación de alta rentabilidad bajo las normativas vigentes.",
+  "graduateProfile": "El profesional de Comercio Internacional de NEXUS es un líder estratégico con capacidad de identificar oportunidades de negocio internacionales, estructurar cadenas de suministro globales, gestionar trámites cambiarios y aduaneros, y liderar acuerdos comerciales multilaterales utilizando técnicas de negociación avanzadas y dominando los estándares mundiales Incoterms.",
+  "careerOpportunities": [
+    {
+      "role": "Director de Importaciones y Exportaciones",
+      "description": "Diseñar y coordinar los flujos aduaneros y documentales de ingreso y salida de mercancías de la compañía.",
+      "avgSalary": "4.800.000 - 7.500.000 COP"
+    },
+    {
+      "role": "Consultor de Negociaciones Globales",
+      "description": "Asesorar a empresas privadas y entidades públicas en la apertura de nuevos mercados y convenios comerciales.",
+      "avgSalary": "5.000.000 - 8.000.000 COP"
+    },
+    {
+      "role": "Gerente de Supply Chain y Logística Exterior",
+      "description": "Supervisar transportistas, operadores aduaneros y canales de distribución física internacional (DFI).",
+      "avgSalary": "5.500.000 - 8.500.000 COP"
+    },
+    {
+      "role": "Especialista en Inteligencia de Mercados",
+      "description": "Investigar el comportamiento del consumidor global y barreras arancelarias y no arancelarias de destino.",
+      "avgSalary": "4.000.000 - 6.200.000 COP"
+    }
+  ],
+  "semesters": [
+    {
+      "number": 1,
+      "subjects": [
+        {
+          "code": "CI-101",
+          "name": "Introducción al Comercio Exterior",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Conceptos fundamentales del comercio global, evolución histórica de las transacciones fronterizas y bloques comerciales principales."
+        },
+        {
+          "code": "CI-102",
+          "name": "Fundamentos de Administración",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Principios básicos del proceso administrativo: planeación, organización, dirección y control en organizaciones modernas."
+        },
+        {
+          "code": "MAT-103",
+          "name": "Matemática Financiera Básica",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Porcentajes, interés simple y compuesto, amortizaciones y equivalencia de tasas de interés."
+        },
+        {
+          "code": "HUM-101",
+          "name": "Competencias Comunicativas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Técnicas de redacción formal, análisis de textos y expresión oral profesional."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "subjects": [
+        {
+          "code": "CI-201",
+          "name": "Economía General (Micro y Macro)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-101",
+          "description": "Leyes de oferta y demanda del mercado, comportamiento del consumidor, indicadores macroeconómicos y políticas del banco central."
+        },
+        {
+          "code": "CI-202",
+          "name": "Geografía Económica Global",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Distribución geográfica de recursos naturales, puertos comerciales estratégicos, rutas marítimas principales e impacto geopolítico."
+        },
+        {
+          "code": "MAT-202",
+          "name": "Estadística Comercial",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-103",
+          "description": "Análisis de datos cuantitativos, medidas de tendencia central, dispersión y proyecciones de tendencias mercantiles."
+        },
+        {
+          "code": "CI-203",
+          "name": "Contabilidad Básica",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-103",
+          "description": "Registros contables elementales, balance de situación y cuentas de pérdidas y ganancias bajo normas NIIF."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "subjects": [
+        {
+          "code": "CI-301",
+          "name": "Incoterms y Términos de Entrega",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-101",
+          "description": "Análisis minucioso del conjunto de reglas internacionales publicadas por la CCI para la interpretación de términos comerciales de entrega."
+        },
+        {
+          "code": "CI-302",
+          "name": "Geopolítica e Integración Económica",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "CI-202",
+          "description": "Acuerdos comerciales bilaterales y multilaterales, ALADI, CAN, Mercosur, Alianza del Pacífico y Tratados de Libre Comercio (TLC)."
+        },
+        {
+          "code": "CI-303",
+          "name": "Legislación Comercial General",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Aspectos legales del comerciante, sociedades comerciales, títulos valores e introducción al derecho de obligaciones."
+        },
+        {
+          "code": "HUM-201",
+          "name": "Ética Profesional",
+          "credits": 2,
+          "hours": 32,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Responsabilidad social de las corporaciones multinacionales, ética en negociaciones transfronterizas y prevención de fraudes cambiarios."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "subjects": [
+        {
+          "code": "CI-401",
+          "name": "Régimen de Importación",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-301",
+          "description": "Normativa legal nacional para la introducción de mercancías extranjeras: licencias, aranceles, clasificación arancelaria y trámites ante aduanas."
+        },
+        {
+          "code": "CI-402",
+          "name": "Logística y Canales de Distribución",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-301",
+          "description": "Tipos de empaques, embalajes y técnicas de distribución física de mercancías desde origen hasta destino final."
+        },
+        {
+          "code": "CI-403",
+          "name": "Matemática Financiera Avanzada",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-103",
+          "description": "Evaluación financiera de proyectos utilizando criterios de Valor Presente Neto (VPN) y Tasa Interna de Retorno (TIR)."
+        },
+        {
+          "code": "CI-404",
+          "name": "Mercadeo Internacional",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "CI-102",
+          "description": "Estrategias de mezcla de mercadeo (4 P) orientadas a mercados extranjeros y adaptación de productos culturales."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "subjects": [
+        {
+          "code": "CI-501",
+          "name": "Régimen de Exportación",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-401",
+          "description": "Procesos y autorizaciones para la salida legal de mercancías del territorio nacional hacia mercados exteriores y sus regímenes especiales."
+        },
+        {
+          "code": "CI-502",
+          "name": "Transporte y Logística Multimodal",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "CI-402",
+          "description": "Análisis comparativo de fletes terrestres, aéreos, marítimos y ferroviarios. Documentación (Bill of Lading, Air Waybill, CRT)."
+        },
+        {
+          "code": "CI-503",
+          "name": "Finanzas Internacionales",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "CI-403",
+          "description": "Mercado cambiario de divisas, fluctuaciones de tasas de cambio, cobertura del riesgo cambiario mediante derivados (forwards, swaps)."
+        },
+        {
+          "code": "CI-504",
+          "name": "Inglés Comercial I",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Vocabulario y competencias lingüísticas en inglés para correspondencia mercantil, llamadas y reuniones básicas."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "subjects": [
+        {
+          "code": "CI-601",
+          "name": "Régimen Cambiario y Aduanero",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-501",
+          "description": "Canalización de divisas a través del mercado regulado, declaraciones de cambio, sanciones y legislación penal cambiaria."
+        },
+        {
+          "code": "CI-602",
+          "name": "Estrategias de Negociación Intercultural",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "HUM-101",
+          "description": "Protocolo de negocios con culturas asiáticas, americanas e hispanas, manejo de conflictos y oratoria persuasiva."
+        },
+        {
+          "code": "CI-603",
+          "name": "Investigación de Mercados Internacionales",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "CI-404",
+          "description": "Metodología de recolección de datos primarios y secundarios sobre nichos de consumo extranjeros e identificación de barreras."
+        },
+        {
+          "code": "CI-604",
+          "name": "Inglés Comercial II",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "CI-504",
+          "description": "Redacción avanzada de contratos comerciales internacionales y presentación estructurada de proyectos en inglés."
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "subjects": [
+        {
+          "code": "CI-701",
+          "name": "Contratos y Seguros Internacionales",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-601",
+          "description": "Tipología de contratos de compraventa internacional, cláusulas de arbitraje y pólizas de seguro de transporte de mercancías."
+        },
+        {
+          "code": "CI-702",
+          "name": "Seminario de Grado",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Aprobación 70% créditos",
+          "description": "Búsqueda y delimitación de un proyecto empresarial enfocado en la internacionalización o solución de un problema aduanero regional."
+        },
+        {
+          "code": "CI-703",
+          "name": "Puertos y Zonas Francas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "CI-502",
+          "description": "Estudio de las Zonas Francas como territorios exentos de aranceles, beneficios fiscales de instalación y operatividad portuaria."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "subjects": [
+        {
+          "code": "CI-801",
+          "name": "Proyecto de Grado - Negocios",
+          "credits": 6,
+          "hours": 96,
+          "type": "Obligatoria",
+          "prerequisites": "CI-702",
+          "description": "Desarrollo del proyecto de internacionalización de una empresa real, sustentación teórica e impacto de viabilidad económica."
+        },
+        {
+          "code": "CI-802",
+          "name": "Comercio Electrónico Transfronterizo",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "CI-603",
+          "description": "Canales de venta digitales globales (Amazon, Alibaba, Shopify), pasarelas de pago globales y logística de última milla transfronteriza."
+        },
+        {
+          "code": "CI-803",
+          "name": "Dirección Estratégica Global",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "CI-102",
+          "description": "Modelos de toma de decisiones en empresas corporativas multinacionales, fusiones corporativas y alianzas de marca globales."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "subjects": [
+        {
+          "code": "CI-901",
+          "name": "Arbitraje y Solución de Conflictos Internacionales",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-701",
+          "description": "Mecanismos alternativos de solución de conflictos en contratos internacionales de compraventa. Tribunales de Arbitramento."
+        },
+        {
+          "code": "CI-902",
+          "name": "Inteligencia de Mercados Emergentes",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-603",
+          "description": "Análisis de oportunidades en mercados de Asia-Pacífico, África y Medio Oriente. Barreras comerciales particulares."
+        },
+        {
+          "code": "CI-903",
+          "name": "Gestión de Riesgos Financieros Globales",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "CI-503",
+          "description": "Evaluación del riesgo país, riesgo soberano y coberturas de tipos de cambio avanzadas empleando contratos de opciones y futuros."
+        },
+        {
+          "code": "CI-904",
+          "name": "Francés de Negocios I",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Adquisición de vocabulario comercial en francés para interacciones de etiqueta y correspondencia mercantil básica."
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "subjects": [
+        {
+          "code": "CI-1001",
+          "name": "Trabajo de Grado II - Internacionalización Real",
+          "credits": 6,
+          "hours": 96,
+          "type": "Obligatoria",
+          "prerequisites": "CI-801",
+          "description": "Puesta en marcha del plan de exportación o importación estructurado, medición de indicadores comerciales y sustentación ante sínodos."
+        },
+        {
+          "code": "CI-1002",
+          "name": "Liderazgo y Sostenibilidad Global",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "CI-803",
+          "description": "Responsabilidad social de corporaciones multinacionales y cumplimiento de los Objetivos de Desarrollo Sostenible (ODS) en comercio."
+        },
+        {
+          "code": "CI-1003",
+          "name": "Francés de Negocios II",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "CI-904",
+          "description": "Técnicas de negociación intercultural en francés, redacción de contratos bilingües y ponencias de mercado."
+        }
+      ]
+    }
+  ],
+  "graduationRequirements": [
+    "Nivel de Inglés B2 certificado por el Instituto de Lenguas o prueba internacional (IELTS/TOEFL)",
+    "320 horas de Prácticas Profesionales en zonas francas, aduanas, puertos o empresas exportadoras",
+    "80 horas de Servicio Social comunitario acreditadas",
+    "Aprobación y sustentación pública del Proyecto de Internacionalización / Grado",
+    "Aprobación del 100% de los créditos del plan de estudios (162 créditos)",
+    "Presentación oficial de las pruebas de Estado Saber Pro"
+  ],
+  "annualIncrement": "IPC + 1.2% (Aproximadamente 6.0% anual para el periodo vigente)",
+  "scholarships": [
+    {
+      "name": "Beca Excelencia Académica",
+      "value": "Hasta 50% de descuento en la matrícula ordinaria para promedios semestrales superiores a 4.5."
+    },
+    {
+      "name": "Beca Convenio ProColombia",
+      "value": "25% de descuento para hijos de empleados de empresas afiliadas a programas de exportación de ProColombia."
+    },
+    {
+      "name": "Beca Jóvenes Globales",
+      "value": "20% de descuento para estudiantes que participen en misiones internacionales de representación académica."
+    }
+  ],
+  "financingOptions": [
+    {
+      "name": "Financiación Directa NEXUS",
+      "value": "Paga el 40% del valor total de la matrícula al inicio del semestre, y el 60% restante en 3 cuotas mensuales con 0% de interés de financiación."
+    },
+    {
+      "name": "Crédito Educativo ICETEX",
+      "value": "Líneas de crédito a corto, mediano y largo plazo. Tasas preferenciales de interés y periodos de gracia de pago tras la graduación (Líneas Tú Eliges)."
+    },
+    {
+      "name": "Convenios Financieros",
+      "value": "Crédito pre-aprobado y desembolso inmediato con entidades aliadas como Sufi (Bancolombia), Banco Pichincha y Fincomercio a tasas muy competitivas."
+    }
+  ],
+  "directory": {
+    "director": {
+      "name": "Dra. Liliana María Benavides",
+      "email": "l.benavides@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 410",
+      "office": "Edificio de Ciencias Administrativas, Oficina 201",
+      "hours": "Martes y Jueves: 3:00 PM - 6:00 PM"
+    },
+    "coordinator": {
+      "name": "Mg. Juan Carlos Valderrama",
+      "email": "j.valderrama@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 411",
+      "office": "Edificio de Ciencias Administrativas, Oficina 202",
+      "hours": "Lunes a Viernes: 8:00 AM - 12:00 PM"
+    },
+    "tutoring": "Tutorías de regímenes aduaneros y finanzas cambiarias en el canal Teams 'Tutorías Comercio Internacional'. Horarios: Miércoles 10:00 AM - 12:00 PM y Viernes 2:00 PM - 4:00 PM.",
+    "regulationsUrl": "https://nexus.edu.co/reglamentos/reglamento-estudiantil-general.pdf"
+  }
+}

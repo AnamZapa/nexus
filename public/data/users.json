@@ -1,0 +1,56 @@
+[
+  {
+    "id": "std_01",
+    "name": "Alejandro Gómez",
+    "code": "20231020045",
+    "semester": 4,
+    "careerId": "desarrollo_software",
+    "careerName": "Desarrollo de Software",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Alejandro"
+  },
+  {
+    "id": "std_02",
+    "name": "Mariana Restrepo",
+    "code": "20222015098",
+    "semester": 6,
+    "careerId": "arte_culinario",
+    "careerName": "Arte Culinario",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Mariana"
+  },
+  {
+    "id": "std_03",
+    "name": "Carlos Mendoza",
+    "code": "20241030012",
+    "semester": 2,
+    "careerId": "comercio_internacional",
+    "careerName": "Comercio Internacional",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Carlos"
+  },
+  {
+    "id": "std_04",
+    "name": "Valentina Ortíz",
+    "code": "20212008064",
+    "semester": 8,
+    "careerId": "seguridad_laboral",
+    "careerName": "Seguridad Laboral",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Valentina"
+  },
+  {
+    "id": "std_05",
+    "name": "Sebastián Castro",
+    "code": "20232022101",
+    "semester": 5,
+    "careerId": "sistemas_informaticos",
+    "careerName": "Sistemas Informáticos",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Sebastian"
+  },
+  {
+    "id": "std_06",
+    "name": "Gabriela Silva",
+    "code": "20242011033",
+    "semester": 3,
+    "careerId": "produccion_eventos",
+    "careerName": "Producción de Eventos",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=Gabriela"
+  }
+]

@@ -1,0 +1,328 @@
+{
+  "id": "seguridad_laboral",
+  "name": "Seguridad Laboral",
+  "title": "Tecnólogo en Seguridad y Salud en el Trabajo",
+  "duration": "6 Semestres",
+  "credits": 96,
+  "modality": "Híbrida (Presencial / Virtual)",
+  "costPerSemester": 3200000,
+  "description": "El programa de Seguridad Laboral (Seguridad y Salud en el Trabajo) de NEXUS capacita a profesionales comprometidos con la prevención de riesgos y la preservación de la salud de los colaboradores en todo tipo de industrias. Los estudiantes aprenden a diseñar e implementar Sistemas de Gestión (SG-SST) conforme a la legislación nacional, identificar riesgos físicos, químicos, biológicos y ergonómicos, y auditar procesos bajo estándares internacionales como ISO 45001.",
+  "graduateProfile": "El egresado de Seguridad Laboral de NEXUS es un líder preventivo con capacidad de estructurar y dirigir comités paritarios de salud ocupacional (COPASST), formular planes de preparación y respuesta ante emergencias, evaluar puestos de trabajo ergonómicamente e investigar incidentes y accidentes de trabajo para generar planes de mejora continua.",
+  "careerOpportunities": [
+    {
+      "role": "Coordinador de SG-SST",
+      "description": "Diseñar, ejecutar y evaluar el Sistema de Gestión de la Seguridad y Salud en el Trabajo en empresas de cualquier sector.",
+      "avgSalary": "3.500.000 - 5.500.000 COP"
+    },
+    {
+      "role": "Inspector de Seguridad e Higiene Industrial",
+      "description": "Supervisar las condiciones de seguridad en campo (ej. obras de construcción, plantas industriales) y velar por el uso de EPPs.",
+      "avgSalary": "2.800.000 - 4.200.000 COP"
+    },
+    {
+      "role": "Auditor Interno ISO 45001",
+      "description": "Evaluar la conformidad del sistema de seguridad laboral de las empresas frente al estándar internacional ISO 45001.",
+      "avgSalary": "4.000.000 - 6.000.000 COP"
+    },
+    {
+      "role": "Asesor de ARL (Administradora de Riesgos)",
+      "description": "Brindar consultoría técnica y capacitación en prevención de riesgos a empresas afiliadas a la aseguradora.",
+      "avgSalary": "3.800.000 - 5.800.000 COP"
+    }
+  ],
+  "semesters": [
+    {
+      "number": 1,
+      "subjects": [
+        {
+          "code": "SL-101",
+          "name": "Introducción a la Seguridad y Salud",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Historia de la salud ocupacional, conceptos de peligro, riesgo, accidente, incidente y enfermedad laboral."
+        },
+        {
+          "code": "SL-102",
+          "name": "Anatomía y Fisiología Ocupacional",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Estudio del cuerpo humano, sistemas óseo, muscular, respiratorio y circulatorio, y cómo interactúan ante los riesgos laborales."
+        },
+        {
+          "code": "MAT-101",
+          "name": "Matemática Básica",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Cálculos básicos, proporciones y resolución de ecuaciones lineales aplicadas a mediciones cuantitativas."
+        },
+        {
+          "code": "HUM-101",
+          "name": "Competencias Comunicativas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Lectura y redacción de informes técnicos, comunicación asertiva y oratoria orientada a capacitaciones corporativas."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "subjects": [
+        {
+          "code": "SL-201",
+          "name": "Marco Legal de la Seguridad Laboral",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SL-101",
+          "description": "Normativas nacionales vigentes en materia de riesgos laborales, resoluciones, decretos y responsabilidades civil y penal del empleador."
+        },
+        {
+          "code": "SL-202",
+          "name": "Factores de Riesgo e Identificación",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SL-101",
+          "description": "Clasificación de peligros según la guía técnica colombiana GTC 45 (riesgos físicos, químicos, biológicos, ergonómicos, mecánicos)."
+        },
+        {
+          "code": "MAT-203",
+          "name": "Estadística e Indicadores de Gestión",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-101",
+          "description": "Cálculo de tasas de accidentalidad, ausentismo laboral, severidad, frecuencia e interpretación de datos epidemiológicos."
+        },
+        {
+          "code": "SL-203",
+          "name": "Primeros Auxilios Básicos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SL-102",
+          "description": "Atención primaria ante fracturas, quemaduras, asfixias, RCP básica e inmovilizaciones bajo protocolos de emergencia."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "subjects": [
+        {
+          "code": "SL-301",
+          "name": "Higiene Industrial I (Riesgos Físicos)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SL-202",
+          "description": "Metodología para medir, evaluar y controlar la exposición a ruido, iluminación deficiente, vibraciones y temperaturas extremas en el trabajo."
+        },
+        {
+          "code": "SL-302",
+          "name": "Seguridad Industrial I (Riesgos Eléctricos)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SL-202",
+          "description": "Estándares de seguridad para prevención de accidentes con electricidad de alta y baja tensión, maquinaria pesada y herramientas de mano."
+        },
+        {
+          "code": "SL-303",
+          "name": "Medicina Preventiva y del Trabajo",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SL-102",
+          "description": "Exámenes médicos ocupacionales de ingreso, periódicos y de retiro. Programas de vigilancia epidemiológica."
+        },
+        {
+          "code": "HUM-201",
+          "name": "Ética Profesional",
+          "credits": 2,
+          "hours": 32,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Transparencia en el reporte de accidentes laborales, secreto médico en la salud ocupacional y principios deontológicos."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "subjects": [
+        {
+          "code": "SL-401",
+          "name": "Higiene Industrial II (Riesgos Químicos)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SL-301",
+          "description": "Evaluación ambiental de vapores, gases, material particulado (polvos) y agentes biológicos en los puestos de trabajo."
+        },
+        {
+          "code": "SL-402",
+          "name": "Ergonomía Ocupacional",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SL-102",
+          "description": "Diseño de puestos de trabajo, análisis de posturas forzadas, manipulación manual de cargas y prevención de desórdenes musculoesqueléticos."
+        },
+        {
+          "code": "SL-403",
+          "name": "Planes de Emergencia y Contingencia",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SL-203",
+          "description": "Formulación de planes de evacuación, análisis de vulnerabilidad frente a catástrofes naturales o tecnológicas, y simulacros."
+        },
+        {
+          "code": "SL-404",
+          "name": "Seguridad en Tareas de Alto Riesgo",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "SL-302",
+          "description": "Protocolos de trabajo seguro en alturas, espacios confinados, soldadura (caliente) y manejo de sustancias químicas peligrosas."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "subjects": [
+        {
+          "code": "SL-501",
+          "name": "Sistemas de Gestión de SST (SG-SST)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SL-201, SL-202",
+          "description": "Estructuración del sistema bajo el ciclo PHVA (Planear, Hacer, Verificar, Actuar) conforme a la normatividad ministerial."
+        },
+        {
+          "code": "SL-502",
+          "name": "Riesgo Psicosocial y Clima Laboral",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SL-303",
+          "description": "Estrés ocupacional, acoso laboral, aplicación de baterías de riesgo psicosocial oficiales y programas de bienestar mental corporativo."
+        },
+        {
+          "code": "SL-503",
+          "name": "Investigación de Accidentes Ocupacionales",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SL-201",
+          "description": "Metodologías de análisis de causa raíz (espina de pescado, los 5 porqués) y redacción de informes ante entes gubernamentales."
+        },
+        {
+          "code": "SL-504",
+          "name": "Sistemas de Gestión Ambiental",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Fundamentos de la norma ISO 14001, gestión integral de residuos sólidos y líquidos, y sostenibilidad industrial."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "subjects": [
+        {
+          "code": "SL-601",
+          "name": "Auditoría en Sistemas de Gestión ISO 45001",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SL-501",
+          "description": "Técnicas de auditoría interna, preparación de listas de chequeo, hallazgos, no conformidades y elaboración de informes."
+        },
+        {
+          "code": "SL-602",
+          "name": "Proyecto de Grado - SG-SST",
+          "credits": 6,
+          "hours": 96,
+          "type": "Obligatoria",
+          "prerequisites": "Haber aprobado el 80% de créditos",
+          "description": "Formulación del Sistema de Gestión de Seguridad y Salud en el Trabajo para una empresa real y diseño de su plan de implementación."
+        },
+        {
+          "code": "SL-603",
+          "name": "Toxicología Laboral",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "SL-401",
+          "description": "Efectos biológicos de los xenobióticos, límites de exposición permisibles y monitoreo biológico de trabajadores expuestos."
+        }
+      ]
+    }
+  ],
+  "graduationRequirements": [
+    "Nivel de Inglés B1 certificado por el Instituto de Lenguas",
+    "240 horas de Prácticas Profesionales en el diseño e implementación del SG-SST en empresas aliadas",
+    "60 horas de Servicio Social comunitario acreditadas",
+    "Aprobación y sustentación del Proyecto de Grado - SG-SST",
+    "Aprobación y certificación vigente en el curso de Alturas Nivel Coordinador",
+    "Aprobación del 100% de los créditos del plan de estudios (96 créditos)",
+    "Presentación oficial de las pruebas de Estado Saber TyT"
+  ],
+  "annualIncrement": "IPC + 1.0% (Aproximadamente 5.8% anual para el periodo vigente)",
+  "scholarships": [
+    {
+      "name": "Beca Prevención y Salud",
+      "value": "Descuento del 30% patrocinado por Administradoras de Riesgos Laborales (ARL) aliadas para promover técnicos calificados."
+    },
+    {
+      "name": "Beca Excelencia Académica",
+      "value": "Hasta 50% de descuento en la matrícula ordinaria para promedios semestrales superiores a 4.5."
+    },
+    {
+      "name": "Descuento Convenio Sector Salud",
+      "value": "15% de descuento para trabajadores del sector salud o afiliados a cajas de compensación aliadas."
+    }
+  ],
+  "financingOptions": [
+    {
+      "name": "Financiación Directa NEXUS",
+      "value": "Paga el 40% del valor total de la matrícula al inicio del semestre, y el 60% restante en 3 cuotas mensuales con 0% de interés de financiación."
+    },
+    {
+      "name": "Crédito Educativo ICETEX",
+      "value": "Líneas de crédito a corto, mediano y largo plazo. Tasas preferenciales de interés y periodos de gracia de pago tras la graduación (Líneas Tú Eliges)."
+    },
+    {
+      "name": "Convenios Financieros",
+      "value": "Crédito pre-aprobado y desembolso inmediato con entidades aliadas como Sufi (Bancolombia), Banco Pichincha y Fincomercio a tasas muy competitivas."
+    }
+  ],
+  "directory": {
+    "director": {
+      "name": "Mg. Carolina Alzate Restrepo",
+      "email": "c.alzate@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 510",
+      "office": "Edificio de Salud, Oficina 102",
+      "hours": "Lunes a Viernes: 8:00 AM - 11:00 AM"
+    },
+    "coordinator": {
+      "name": "Ing. Diego Mauricio Beltrán",
+      "email": "d.beltran@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 511",
+      "office": "Edificio de Salud, Oficina 103",
+      "hours": "Martes y Jueves: 1:00 PM - 4:30 PM"
+    },
+    "tutoring": "Tutorías virtuales en Teams para formulación de SG-SST y mediciones higiénicas. Canal: 'Tutorías SST'. Horarios: Jueves de 2:00 PM a 5:00 PM.",
+    "regulationsUrl": "https://nexus.edu.co/reglamentos/reglamento-estudiantil-general.pdf"
+  }
+}

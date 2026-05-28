@@ -1,0 +1,328 @@
+{
+  "id": "produccion_eventos",
+  "name": "Producción de Eventos",
+  "title": "Tecnólogo en Producción y Gestión de Eventos",
+  "duration": "6 Semestres",
+  "credits": 92,
+  "modality": "Presencial",
+  "costPerSemester": 3600000,
+  "description": "El programa de Producción de Eventos de NEXUS forma profesionales capacitados para conceptualizar, planificar, financiar y ejecutar eventos masivos y corporativos con altos estándares de calidad. Los estudiantes adquieren habilidades en diseño escenográfico, ingeniería de sonido y luces, gestión de patrocinios, logística de masas, relaciones públicas y planes de contingencia para espectáculos en vivo y convenciones.",
+  "graduateProfile": "El Tecnólogo en Producción de Eventos de NEXUS es un líder logístico con alta capacidad de resolución bajo presión. Domina las normativas de seguridad en aglomeraciones de público, gestiona contratos de proveedores técnicos, diseña layouts espaciales, elabora presupuestos detallados y ejecuta estrategias de marketing para eventos corporativos, artísticos, deportivos y sociales.",
+  "careerOpportunities": [
+    {
+      "role": "Director de Producción Logística",
+      "description": "Coordinar el montaje, desmontaje, personal técnico y flujos operativos de espectáculos masivos y festivales.",
+      "avgSalary": "3.800.000 - 5.800.000 COP"
+    },
+    {
+      "role": "Gestor de Eventos Corporativos (MICE)",
+      "description": "Organizar congresos, convenciones empresariales, lanzamientos de marca e incentivos de personal para corporaciones.",
+      "avgSalary": "3.500.000 - 5.200.000 COP"
+    },
+    {
+      "role": "Organizador de Eventos de Autor",
+      "description": "Planificar bodas, aniversarios y celebraciones privadas exclusivas coordinando banquetes, locación y decoración.",
+      "avgSalary": "Variable (Honorarios por Evento)"
+    },
+    {
+      "role": "Coordinador de Relaciones Públicas y Patrocinios",
+      "description": "Gestionar el contacto con prensa, celebridades, patrocinadores comerciales y campañas de venta de entradas.",
+      "avgSalary": "3.200.000 - 4.800.000 COP"
+    }
+  ],
+  "semesters": [
+    {
+      "number": 1,
+      "subjects": [
+        {
+          "code": "PE-101",
+          "name": "Introducción a la Industria del Entretenimiento",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Panorámica de los sectores de espectáculos, tipologías de eventos, actores clave en la producción y tendencias globales."
+        },
+        {
+          "code": "PE-102",
+          "name": "Administración Básica para Eventos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Proceso administrativo general adaptado a proyectos efímeros y flujos de trabajo orientados a fechas límite."
+        },
+        {
+          "code": "MAT-104",
+          "name": "Matemática Aplicada y Presupuestos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Operaciones matemáticas aplicadas a cotizaciones, matrices de costos fijos y variables, e impuestos en espectáculos."
+        },
+        {
+          "code": "HUM-101",
+          "name": "Competencias Comunicativas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Técnicas de redacción para propuestas comerciales de patrocinio y oratoria persuasiva."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "subjects": [
+        {
+          "code": "PE-201",
+          "name": "Planificación y Cronogramas (Gantt)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "PE-102",
+          "description": "Estructuración de fases de preproducción, producción y postproducción de un evento mediante diagramas de hitos."
+        },
+        {
+          "code": "PE-202",
+          "name": "Fundamentos Técnicos I (Audio)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "PE-101",
+          "description": "Conceptos de acústica física, consolas de sonido, micrófonos, sistemas de amplificación (PA) y monitoreo para conferencias."
+        },
+        {
+          "code": "PE-203",
+          "name": "Legislación y Permisos Públicos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Normativas para espectáculos masivos, derechos de autor (SAYCO-ACINPRO), permisos alcaldía y seguros de responsabilidad civil."
+        },
+        {
+          "code": "PE-204",
+          "name": "Relaciones Públicas y Protocolo",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Uso de etiqueta corporativa y gubernamental, orden de precedencias, y gestión de atenciones a invitados VIP (hospitalidad)."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "subjects": [
+        {
+          "code": "PE-301",
+          "name": "Logística de Campo y Montaje",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "PE-201",
+          "description": "Coordinación de personal de carga, accesos, transporte de materiales, camerinos, credenciales de acreditación y backstage."
+        },
+        {
+          "code": "PE-302",
+          "name": "Fundamentos Técnicos II (Iluminación)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "PE-202",
+          "description": "Electricidad en eventos, luminarias tradicionales y LED, consolas DMX, diseño de escenas lumínicas y estructuras truss de anclaje."
+        },
+        {
+          "code": "PE-303",
+          "name": "Marketing y Venta de Eventos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "PE-102",
+          "description": "Campañas de intriga en redes sociales, alianzas con ticketeras oficiales, planes de prensa y venta de patrocinios empresariales."
+        },
+        {
+          "code": "HUM-201",
+          "name": "Ética Profesional",
+          "credits": 2,
+          "hours": 32,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Trato ético de proveedores, honestidad en los aforos de público y responsabilidad ecológica en la gestión de residuos masivos."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "subjects": [
+        {
+          "code": "PE-401",
+          "name": "Planes de Emergencia en Aglomeraciones",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "PE-203",
+          "description": "Análisis de riesgos, cálculo de rutas de evacuación, señalización, manejo de pánico, brigadas de primeros auxilios y coordinación con la Cruz Roja."
+        },
+        {
+          "code": "PE-402",
+          "name": "Diseño Escenográfico y Renderizado",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "PE-301",
+          "description": "Creación del concepto visual del escenario, distribución de espacios (lay-out), materiales escénicos e introducción a modelado 3D."
+        },
+        {
+          "code": "PE-403",
+          "name": "Tecnología de Video y Pantallas",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "PE-302",
+          "description": "Configuración de pantallas LED modulares, proyectores de alta potencia, circuito cerrado de TV (CCTV) y video mapping."
+        },
+        {
+          "code": "PE-404",
+          "name": "Gestión de Eventos Deportivos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "PE-301",
+          "description": "Logística específica de maratones, torneos y campeonatos: cronometraje, premiaciones, zonas de hidratación y control antidopaje."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "subjects": [
+        {
+          "code": "PE-501",
+          "name": "Dirección de Eventos Corporativos (MICE)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "PE-303",
+          "description": "Producción de congresos, exposiciones comerciales, cocteles de fin de año e incentivos. Negociaciones con centros de convenciones."
+        },
+        {
+          "code": "PE-502",
+          "name": "Dirección Técnica en Vivo (Show Running)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "PE-403",
+          "description": "Elaboración del libreto de producción (cue-to-cue sheet), intercomunicación de cabina a escenario y manejo de imprevistos artísticos."
+        },
+        {
+          "code": "PE-503",
+          "name": "Eventos Sostenibles e Híbridos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "PE-403",
+          "description": "Plataformas de streaming, interacción en línea, control de huella de carbono en eventos masivos y catering responsable."
+        },
+        {
+          "code": "PE-504",
+          "name": "Catering y Banquetes",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Montaje de bufés, tipos de servicio de mesa, cálculo de porciones de comida y alcohol, e inspección sanitaria de alimentos."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "subjects": [
+        {
+          "code": "PE-601",
+          "name": "Proyecto Integrador - Evento Real",
+          "credits": 6,
+          "hours": 96,
+          "type": "Obligatoria",
+          "prerequisites": "Haber aprobado el 80% de créditos",
+          "description": "Planificación, financiamiento, comercialización y producción en vivo de un evento real abierto al público como proyecto de grado."
+        },
+        {
+          "code": "PE-602",
+          "name": "Práctica Profesional Sectorial",
+          "credits": 6,
+          "hours": 120,
+          "type": "Obligatoria",
+          "prerequisites": "PE-502",
+          "description": "Inmersión directa colaborando en una empresa operadora de congresos, agencia de marketing BTL o productora de conciertos."
+        },
+        {
+          "code": "PE-603",
+          "name": "Wedding Planning (Planificación de Bodas)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "PE-204",
+          "description": "Dirección completa del día de bodas, psicología del cliente nupcial, cronograma de protocolo civil/religioso y tendencias estéticas."
+        }
+      ]
+    }
+  ],
+  "graduationRequirements": [
+    "Nivel de Inglés B1 certificado por el Instituto de Lenguas",
+    "240 horas de Prácticas Profesionales en agencias de eventos, productoras técnicas o teatros aliados",
+    "60 horas de Servicio Social en la gestión y soporte de eventos comunitarios",
+    "Aprobación y sustentación del Proyecto Integrador - Evento Real",
+    "Certificación vigente del Curso Básico de Primeros Auxilios y Logística en Aglomeraciones",
+    "Aprobación del 100% de los créditos del plan de estudios (92 créditos)",
+    "Presentación oficial de las pruebas de Estado Saber TyT"
+  ],
+  "annualIncrement": "IPC + 1.1% (Aproximadamente 5.9% anual para el periodo vigente)",
+  "scholarships": [
+    {
+      "name": "Beca Productor Creativo",
+      "value": "Descuento del 20% patrocinado por agencias de marketing BTL y productoras de conciertos aliadas de NEXUS."
+    },
+    {
+      "name": "Beca Excelencia Académica",
+      "value": "Hasta 50% de descuento en la matrícula ordinaria para promedios semestrales superiores a 4.5."
+    },
+    {
+      "name": "Beca Apoyo Cultural",
+      "value": "25% de descuento para artistas o deportistas con representación activa en ligas nacionales."
+    }
+  ],
+  "financingOptions": [
+    {
+      "name": "Financiación Directa NEXUS",
+      "value": "Paga el 40% del valor total de la matrícula al inicio del semestre, y el 60% restante en 3 cuotas mensuales con 0% de interés de financiación."
+    },
+    {
+      "name": "Crédito Educativo ICETEX",
+      "value": "Líneas de crédito a corto, mediano y largo plazo. Tasas preferenciales de interés y periodos de gracia de pago tras la graduación (Líneas Tú Eliges)."
+    },
+    {
+      "name": "Convenios Financieros",
+      "value": "Crédito pre-aprobado y desembolso inmediato con entidades aliadas como Sufi (Bancolombia), Banco Pichincha y Fincomercio a tasas muy competitivas."
+    }
+  ],
+  "directory": {
+    "director": {
+      "name": "Lic. Juan Sebastián Gómez",
+      "email": "js.gomez@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 610",
+      "office": "Edificio de Ciencias Humanas, Oficina 304",
+      "hours": "Martes a Viernes: 10:00 AM - 12:30 PM"
+    },
+    "coordinator": {
+      "name": "Productora Sandra Viviana López",
+      "email": "sv.lopez@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 611",
+      "office": "Edificio de Ciencias Humanas, Cabina de Producción",
+      "hours": "Lunes a Jueves: 2:00 PM - 5:30 PM"
+    },
+    "tutoring": "Asesorías en diseño técnico y planes de emergencia. Canal de Teams 'Tutorías Eventos NEXUS'. Horarios de atención: Lunes de 9:00 AM a 12:00 PM.",
+    "regulationsUrl": "https://nexus.edu.co/reglamentos/reglamento-estudiantil-general.pdf"
+  }
+}

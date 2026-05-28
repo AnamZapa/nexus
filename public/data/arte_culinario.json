@@ -1,0 +1,328 @@
+{
+  "id": "arte_culinario",
+  "name": "Arte Culinario",
+  "title": "Técnico Profesional en Arte Culinario y Gastronomía",
+  "duration": "6 Semestres",
+  "credits": 94,
+  "modality": "Presencial (Talleres Prácticos)",
+  "costPerSemester": 6200000,
+  "description": "El programa de Arte Culinario de NEXUS forma a los futuros líderes de la industria gastronómica mundial. A través de una inmersión 100% práctica en cocinas con estándares internacionales, los estudiantes dominan técnicas de corte, cocción clásica francesa, gastronomía de vanguardia, pastelería fina, enología y administración de restaurantes. Prepara profesionales capaces de destacar en cocinas de alta gama o lanzar emprendimientos gastronómicos de impacto.",
+  "graduateProfile": "El egresado en Arte Culinario de NEXUS domina con precisión las técnicas culinarias de la cocina internacional y colombiana. Diseña menús balanceados nutricional y financieramente, lidera brigadas de cocina (brigade de cuisine) bajo lineamientos de higiene rigurosos y cuenta con la visión administrativa necesaria para rentabilizar operaciones culinarias en hoteles, restaurantes o servicios de catering.",
+  "careerOpportunities": [
+    {
+      "role": "Chef Ejecutivo",
+      "description": "Liderar la operación completa de la cocina en hoteles de lujo, cruceros o restaurantes de renombre.",
+      "avgSalary": "5.500.000 - 9.000.000 COP"
+    },
+    {
+      "role": "Chef Pastelero e Innovador Dulce",
+      "description": "Diseñar y elaborar repostería fina, panadería artesanal y postres de autor para establecimientos exclusivos.",
+      "avgSalary": "3.800.000 - 5.500.000 COP"
+    },
+    {
+      "role": "Emprendedor Gastronómico",
+      "description": "Crear, estructurar y dirigir restaurantes propios, empresas de banquetes o marcas de alimentos.",
+      "avgSalary": "Variable (Dependiente del Emprendimiento)"
+    },
+    {
+      "role": "Consultor y Diseñador de Menús",
+      "description": "Asesorar a empresas de alimentos en estandarización de recetas, costeo de platos y diseño conceptual de cartas.",
+      "avgSalary": "4.000.000 - 6.500.000 COP"
+    }
+  ],
+  "semesters": [
+    {
+      "number": 1,
+      "subjects": [
+        {
+          "code": "AC-101",
+          "name": "Técnicas de Corte y Preparación",
+          "credits": 4,
+          "hours": 80,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Manejo seguro del cuchillo, cortes tradicionales franceses (julienne, brunoise, batonnet) y métodos básicos de cocción térmica."
+        },
+        {
+          "code": "AC-102",
+          "name": "Higiene y Seguridad Alimentaria (HACCP)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Prevención de enfermedades transmitidas por alimentos (ETAs), microbiología básica y normas internacionales de control sanitario en cocina."
+        },
+        {
+          "code": "AC-103",
+          "name": "Historia de la Gastronomía",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Evolución de la alimentación humana, de la cocina antigua al auge de la 'haute cuisine' francesa y corrientes contemporáneas."
+        },
+        {
+          "code": "MAT-102",
+          "name": "Matemática Aplicada al Costeo",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Operaciones matemáticas aplicadas a la conversión de unidades de medida culinarias y fórmulas básicas de rendimiento de insumos."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "subjects": [
+        {
+          "code": "AC-201",
+          "name": "Cocina de Fondos y Salsas Clásicas",
+          "credits": 4,
+          "hours": 80,
+          "type": "Obligatoria",
+          "prerequisites": "AC-101",
+          "description": "Elaboración de fondos claros y oscuros (ternera, ave, pescado) y las cinco salsas madre de la cocina clásica francesa."
+        },
+        {
+          "code": "AC-202",
+          "name": "Panadería Básica",
+          "credits": 4,
+          "hours": 80,
+          "type": "Obligatoria",
+          "prerequisites": "AC-102",
+          "description": "Química de la harina, levaduras y masas fermentadas tradicionales (pan francés, brioche, panes rústicos)."
+        },
+        {
+          "code": "AC-203",
+          "name": "Nutrición y Bromatología",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Estudio de los macronutrientes, requerimientos calóricos e impacto químico de los métodos de cocción en los alimentos."
+        },
+        {
+          "code": "HUM-101",
+          "name": "Competencias Comunicativas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Técnicas de redacción, lenguaje corporal y comunicación clara orientada al trabajo en sala y cocina."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "subjects": [
+        {
+          "code": "AC-301",
+          "name": "Cocina Internacional I (Europa)",
+          "credits": 4,
+          "hours": 80,
+          "type": "Obligatoria",
+          "prerequisites": "AC-201",
+          "description": "Platos tradicionales, técnicas y despensa culinaria representativa de Italia, España, Grecia y Francia."
+        },
+        {
+          "code": "AC-302",
+          "name": "Pastelería Clásica y Comercial",
+          "credits": 4,
+          "hours": 80,
+          "type": "Obligatoria",
+          "prerequisites": "AC-202",
+          "description": "Masas batidas secas, líquidas, cremas pasteleras tradicionales, merengues, tartas y repostería para vitrina."
+        },
+        {
+          "code": "AC-303",
+          "name": "Compras e Inventarios en Restaurantes",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-102",
+          "description": "Proceso de selección de proveedores, control de mermas, inventarios PEPS y software de almacenamiento gastronómico."
+        },
+        {
+          "code": "AC-304",
+          "name": "Garde Manger (Cocina Fría)",
+          "credits": 3,
+          "hours": 64,
+          "type": "Electiva",
+          "prerequisites": "AC-101",
+          "description": "Elaboración de terrinas, patés, aderezos complejos, ensaladas de autor, charcutería artesanal y emplatados fríos de etiqueta."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "subjects": [
+        {
+          "code": "AC-401",
+          "name": "Cocina Internacional II (Américas y Asia)",
+          "credits": 4,
+          "hours": 80,
+          "type": "Obligatoria",
+          "prerequisites": "AC-301",
+          "description": "Gastronomía mexicana, peruana, japonesa, tailandesa e india: sus condimentos, técnicas ancestrales e ingredientes típicos."
+        },
+        {
+          "code": "AC-402",
+          "name": "Ingeniería de Menú y Costos de Receta",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "AC-303",
+          "description": "Estandarización de fichas técnicas, cálculo de costo neto de plato, fijación de precios de venta y análisis de rentabilidad (matriz BCG de menús)."
+        },
+        {
+          "code": "AC-403",
+          "name": "Enología y Servicio de Bebidas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Cata de vinos, geografía vitivinícola, maridaje de alimentos y protocolo de servicio de sala."
+        },
+        {
+          "code": "AC-404",
+          "name": "Cocina Típica Colombiana",
+          "credits": 3,
+          "hours": 64,
+          "type": "Electiva",
+          "prerequisites": "AC-201",
+          "description": "Rescate e innovación de recetas de la Costa Caribe, Pacífica, Región Andina y Llanera empleando ingredientes autóctonos."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "subjects": [
+        {
+          "code": "AC-501",
+          "name": "Cocina de Vanguardia",
+          "credits": 4,
+          "hours": 80,
+          "type": "Obligatoria",
+          "prerequisites": "AC-401",
+          "description": "Técnicas de gastronomía molecular: esferificación, espumas con sifón, deshidratación, cocción al vacío (Sous-Vide) y gelificaciones."
+        },
+        {
+          "code": "AC-502",
+          "name": "Diseño y Operación de Cocinas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "AC-102",
+          "description": "Distribución ergonómica de una cocina comercial (flujo de marcha adelante), selección de maquinaria pesada y utensilios industriales."
+        },
+        {
+          "code": "AC-503",
+          "name": "Pastelería y Chocolatería Avanzada",
+          "credits": 4,
+          "hours": 80,
+          "type": "Electiva",
+          "prerequisites": "AC-302",
+          "description": "Templado del chocolate, bombonería fina, esculturas dulces, postres al plato de alta restauración y repostería saludable."
+        },
+        {
+          "code": "HUM-201",
+          "name": "Ética Profesional",
+          "credits": 2,
+          "hours": 32,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Responsabilidad ambiental en el uso de recursos, comercio justo con productores locales y liderazgo ético en brigadas de trabajo."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "subjects": [
+        {
+          "code": "AC-601",
+          "name": "Proyecto de Emprendimiento Gastronómico",
+          "credits": 6,
+          "hours": 96,
+          "type": "Obligatoria",
+          "prerequisites": "Haber aprobado el 80% de créditos",
+          "description": "Diseño conceptual y plan de negocios financiero completo para la apertura de un restaurante o marca de alimentos y bebidas."
+        },
+        {
+          "code": "AC-602",
+          "name": "Práctica Profesional en Restaurante",
+          "credits": 6,
+          "hours": 120,
+          "type": "Obligatoria",
+          "prerequisites": "AC-501",
+          "description": "Inmersión laboral directa en una cocina aliada nacional o internacional, rotando por los diferentes puestos de la brigada."
+        },
+        {
+          "code": "AC-603",
+          "name": "Fotografía y Estilismo de Alimentos",
+          "credits": 2,
+          "hours": 32,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Técnicas de emplatado artístico (food styling) y fotografía básica de platos para marketing gastronómico y redes sociales."
+        }
+      ]
+    }
+  ],
+  "graduationRequirements": [
+    "Nivel de Inglés A2 o francés elemental certificado por el Instituto de Lenguas",
+    "240 horas de Prácticas Profesionales en cocinas de hoteles o restaurantes con convenio",
+    "60 horas de Servicio Social comunitario / comedores sociales acreditadas",
+    "Aprobación y sustentación del Proyecto de Emprendimiento Gastronómico",
+    "Carnet vigente de manipulación de alimentos de alta complejidad",
+    "Aprobación del 100% de los créditos del plan de estudios (94 créditos)",
+    "Presentación de las pruebas de Estado Saber TyT"
+  ],
+  "annualIncrement": "IPC + 1.8% (Aproximadamente 6.6% anual para el periodo vigente - Ajustado por insumos importados)",
+  "scholarships": [
+    {
+      "name": "Beca Chef del Futuro",
+      "value": "Descuento del 30% en la matrícula financiado por la Asociación de Restaurantes Aliados de Alta Gama."
+    },
+    {
+      "name": "Beca Excelencia Académica",
+      "value": "Hasta 50% de descuento en la matrícula ordinaria para promedios superiores a 4.5."
+    },
+    {
+      "name": "Beca Talentos Gastronómicos",
+      "value": "20% de descuento para ganadores de concursos culinarios internos de NEXUS."
+    }
+  ],
+  "financingOptions": [
+    {
+      "name": "Financiación Directa NEXUS",
+      "value": "Paga el 40% del valor total de la matrícula al inicio del semestre, y el 60% restante en 3 cuotas mensuales con 0% de interés de financiación."
+    },
+    {
+      "name": "Crédito Educativo ICETEX",
+      "value": "Líneas de crédito a corto, mediano y largo plazo. Tasas preferenciales de interés y periodos de gracia de pago tras la graduación (Líneas Tú Eliges)."
+    },
+    {
+      "name": "Convenios Financieros",
+      "value": "Crédito pre-aprobado y desembolso inmediato con entidades aliadas como Sufi (Bancolombia), Banco Pichincha y Fincomercio a tasas muy competitivas."
+    }
+  ],
+  "directory": {
+    "director": {
+      "name": "Chef Carlos Eduardo Giraldo",
+      "email": "c.giraldo@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 310",
+      "office": "Edificio Gastronómico, Cocina Taller 1",
+      "hours": "Lunes a Viernes: 10:00 AM - 1:00 PM"
+    },
+    "coordinator": {
+      "name": "Sommelier María Luisa Henao",
+      "email": "m.henao@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 311",
+      "office": "Edificio Gastronómico, Oficina de Enología",
+      "hours": "Lunes, Miércoles y Viernes: 2:00 PM - 5:00 PM"
+    },
+    "tutoring": "Tutorías prácticas presenciales y de costeo en Cocina Taller 3. Horarios: Viernes de 8:00 AM a 12:00 PM. Inscripción previa en la cartelera del edificio.",
+    "regulationsUrl": "https://nexus.edu.co/reglamentos/reglamento-estudiantil-general.pdf"
+  }
+}
