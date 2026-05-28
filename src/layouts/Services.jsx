@@ -4,9 +4,11 @@ import { careers } from '../data/career';
 
 export default function Services() {
     return (
-        <main>
-            <h1>¡Bienvenido!</h1>
-            <p className="subtitle">Conoce nuestros programas</p>
+        <main className="services-main">
+            <div className="services-header">
+                <h1 className="services-titulo">¡Bienvenido!</h1>
+                <p className="subtitle">Conoce nuestros programas académicos</p>
+            </div>
 
             <section className="program-grid">
                 {careers.map((career) => (
