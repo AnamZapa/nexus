@@ -1,0 +1,482 @@
+{
+  "id": "sistemas_informaticos",
+  "name": "Sistemas Informáticos",
+  "title": "Ingeniero de Sistemas Informáticos",
+  "duration": "10 Semestres",
+  "credits": 168,
+  "modality": "Presencial",
+  "costPerSemester": 5200000,
+  "description": "El programa de Sistemas Informáticos forma profesionales integrales con capacidad para diseñar, administrar y robustecer la infraestructura de hardware, software y redes de cualquier organización. Los estudiantes profundizan en redes de telecomunicaciones, administración de servidores, virtualización, bases de datos avanzadas y protocolos de ciberseguridad corporativa para sostener la continuidad de los negocios en la era de la transformación digital.",
+  "graduateProfile": "El Ingeniero de Sistemas Informáticos de NEXUS lidera proyectos de arquitectura de redes, virtualización de servidores e implementación de sistemas operativos robustos. Posee habilidades para mitigar amenazas de seguridad digital, diseñar infraestructuras de telecomunicaciones complejas y estructurar políticas de soporte técnico eficientes a nivel empresarial.",
+  "careerOpportunities": [
+    {
+      "role": "Administrador de Infraestructura TI",
+      "description": "Supervisar y mantener los servidores, almacenamiento y redes físicas y virtuales de la empresa.",
+      "avgSalary": "5.000.000 - 8.000.000 COP"
+    },
+    {
+      "role": "Analista de Ciberseguridad",
+      "description": "Garantizar la protección de la red empresarial contra ataques cibernéticos e implementar políticas de acceso.",
+      "avgSalary": "5.500.000 - 9.000.000 COP"
+    },
+    {
+      "role": "Administrador de Redes y Conectividad",
+      "description": "Planificar e instalar redes de área local y amplia (LAN/WAN) empleando equipamiento moderno como Cisco/Juniper.",
+      "avgSalary": "4.200.000 - 6.500.000 COP"
+    },
+    {
+      "role": "Consultor de Virtualización y Cloud Computing",
+      "description": "Migrar infraestructuras físicas locales a entornos virtuales y nubes privadas o híbridas.",
+      "avgSalary": "4.800.000 - 7.500.000 COP"
+    }
+  ],
+  "semesters": [
+    {
+      "number": 1,
+      "subjects": [
+        {
+          "code": "SI-101",
+          "name": "Introducción a los Sistemas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Fundamentos y componentes del computador: hardware, software, bus de datos, almacenamiento y conceptos generales de sistemas."
+        },
+        {
+          "code": "SI-102",
+          "name": "Fundamentos de Redes",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Introducción a la transmisión de datos, capas del modelo OSI e IP y cableado estructurado."
+        },
+        {
+          "code": "MAT-101",
+          "name": "Matemática Básica",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Álgebra elemental, funciones, trigonometría y resolución de problemas matemáticos aplicados."
+        },
+        {
+          "code": "HUM-101",
+          "name": "Competencias Comunicativas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Expresión oral y escrita, técnicas de redacción y comprensión de textos en el área técnica."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "subjects": [
+        {
+          "code": "SI-201",
+          "name": "Sistemas Operativos Propietarios",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-101",
+          "description": "Administración del kernel, memoria, archivos y procesos en entornos de sistemas operativos Windows y Windows Server."
+        },
+        {
+          "code": "SI-202",
+          "name": "Redes de Datos Locales (LAN)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-102",
+          "description": "Conmutación (Switching), VLANs, protocolos de redundancia como Spanning Tree y configuraciones básicas de redes locales."
+        },
+        {
+          "code": "MAT-201",
+          "name": "Cálculo Diferencial",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-101",
+          "description": "Estudio del cambio cuantitativo, límites, derivadas de funciones y su aplicación analítica."
+        },
+        {
+          "code": "SI-203",
+          "name": "Algoritmos y Estructuras Básicas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Conceptos de programación lógica aplicados a la automatización de tareas en infraestructura."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "subjects": [
+        {
+          "code": "SI-301",
+          "name": "Sistemas Operativos Abiertos (Linux)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-201",
+          "description": "Administración de distribuciones GNU/Linux a nivel de consola (CLI), gestión de permisos, usuarios, discos y servicios."
+        },
+        {
+          "code": "SI-302",
+          "name": "Enrutamiento de Redes (WAN)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-202",
+          "description": "Algoritmos de enrutamiento dinámico (OSPF, RIP, EIGRP), direccionamiento IPv4/IPv6 y subneteo complejo VLSM."
+        },
+        {
+          "code": "SI-303",
+          "name": "Física Eléctrica y Electrónica",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-201",
+          "description": "Leyes de circuitos de corriente directa y alterna, electromagnetismo y componentes electrónicos de computadores."
+        },
+        {
+          "code": "MAT-302",
+          "name": "Estadística y Probabilidad",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-101",
+          "description": "Cálculo de probabilidades, variables aleatorias, muestreo e interpretación estadística de datos."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "subjects": [
+        {
+          "code": "SI-401",
+          "name": "Servicios de Red y Directorios",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-201, SI-301",
+          "description": "Configuración y administración de servicios críticos de red: DNS, DHCP, FTP, Web servers, y Directorio Activo (LDAP)."
+        },
+        {
+          "code": "SI-402",
+          "name": "Scripting y Automatización de TI",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-203",
+          "description": "Programación de scripts avanzados utilizando Bash y Python para automatizar respaldos, monitoreo y mantenimiento."
+        },
+        {
+          "code": "SI-403",
+          "name": "Seguridad Física y Perimetral",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-302",
+          "description": "Implementación de firewalls de red (PFSense, Fortinet), zonas desmilitarizadas (DMZ) y listas de control de acceso (ACLs)."
+        },
+        {
+          "code": "SI-404",
+          "name": "Bases de Datos Empresariales",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-203",
+          "description": "Administración, respaldos, tuning y seguridad en motores relacionales de gran envergadura (Oracle/SQL Server)."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "subjects": [
+        {
+          "code": "SI-501",
+          "name": "Tecnologías de Virtualización",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-401",
+          "description": "Hipervisores tipo 1 y tipo 2 (VMware ESXi, Proxmox, Hyper-V), alta disponibilidad y consolidación de hardware."
+        },
+        {
+          "code": "SI-502",
+          "name": "Redes Inalámbricas y Telefonía IP",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-302",
+          "description": "Estándares Wi-Fi corporativos, telefonía bajo IP usando Asterisk, y protocolos SIP/RTP."
+        },
+        {
+          "code": "SI-503",
+          "name": "Auditoría de Sistemas y TI",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-402",
+          "description": "Estándares y marcos normativos de gobierno TI (COBIT, ITIL) aplicados a la evaluación y control de infraestructura."
+        },
+        {
+          "code": "SI-504",
+          "name": "Ciberseguridad Defensiva",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "SI-403",
+          "description": "Monitoreo de eventos mediante SIEM, detección de intrusos (IDS/IPS) y análisis de logs sospechosos."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "subjects": [
+        {
+          "code": "SI-601",
+          "name": "Diseño de Redes Complejas (CCNP)",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-302",
+          "description": "Enrutamiento avanzado con BGP, direccionamiento multidifusión, MPLS y resolución de fallas en redes globales."
+        },
+        {
+          "code": "SI-602",
+          "name": "Cloud Networking",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-501",
+          "description": "Estructuras de red en la nube pública (VPCs, subredes de AWS/Azure, balanceadores de carga y VPNs de nube)."
+        },
+        {
+          "code": "SI-603",
+          "name": "Monitoreo de Infraestructura y SOC",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-401",
+          "description": "Configuración de herramientas de monitoreo (Zabbix, Nagios, Prometheus) e integración en centros de operaciones."
+        },
+        {
+          "code": "SI-604",
+          "name": "Hacking Ético y Pentesting",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "SI-504",
+          "description": "Fases del hackeo ético, escaneo de vulnerabilidades, explotación controlada y reporte técnico."
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "subjects": [
+        {
+          "code": "SI-701",
+          "name": "Gestión de Servicios de TI (ITIL)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-503",
+          "description": "Ciclo de vida del servicio de TI según el marco de referencia ITIL: estrategia, diseño, transición, operación y mejora."
+        },
+        {
+          "code": "SI-702",
+          "name": "Continuidad de Negocio (BCP/DRP)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-501",
+          "description": "Diseño de planes para contingencias de TI, respaldos remotos inmutables y sitios de recuperación alterna ante desastres."
+        },
+        {
+          "code": "SI-703",
+          "name": "Anteproyecto de Grado",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Aprobación 70% créditos",
+          "description": "Planteamiento formal de un problema tecnológico de infraestructura y formulación de la propuesta metodológica de grado."
+        },
+        {
+          "code": "SI-704",
+          "name": "Informática Forense",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "SI-604",
+          "description": "Preservación, adquisición y análisis de evidencia digital respetando la cadena de custodia legal."
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "subjects": [
+        {
+          "code": "SI-801",
+          "name": "Proyecto de Grado - Infraestructura",
+          "credits": 6,
+          "hours": 96,
+          "type": "Obligatoria",
+          "prerequisites": "SI-703",
+          "description": "Implementación práctica de la solución de redes, seguridad o sistemas formulada en el anteproyecto."
+        },
+        {
+          "code": "SI-802",
+          "name": "Gestión de Centros de Datos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-602",
+          "description": "Arquitectura física de un Datacenter: climatización, redundancia de energía (UPS, plantas), gabinetes y cableado Uptime."
+        },
+        {
+          "code": "SI-803",
+          "name": "Gerencia de TI",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "SI-701",
+          "description": "Liderazgo corporativo, manejo de presupuestos de hardware/software (CapEx/OpEx) y relaciones con proveedores."
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "subjects": [
+        {
+          "code": "SI-901",
+          "name": "Gestión de Proyectos de TI Avanzados",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-701",
+          "description": "Metodologías tradicionales (PMBOK) e híbridas aplicadas a la estimación, costos y compras de infraestructura de TI."
+        },
+        {
+          "code": "SI-902",
+          "name": "Inteligencia Artificial y Machine Learning",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-302",
+          "description": "Modelos de regresión, clasificación y redes neuronales artificiales. Procesamiento y preparación de sets de datos."
+        },
+        {
+          "code": "SI-903",
+          "name": "Internet de las Cosas (IoT)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "SI-502",
+          "description": "Arquitectura de dispositivos embebidos, sensores y actuadores. Protocolos de red MQTT, CoAP e integración con microcontroladores."
+        },
+        {
+          "code": "SI-904",
+          "name": "Ciberseguridad Ofensiva II (Pentesting Avanzado)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "SI-604",
+          "description": "Evasión de firewalls e IDS, exploiting y escalado de privilegios en sistemas Linux y Windows corporativos."
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "subjects": [
+        {
+          "code": "SI-1001",
+          "name": "Proyecto de Grado II - Implementación Final",
+          "credits": 6,
+          "hours": 96,
+          "type": "Obligatoria",
+          "prerequisites": "SI-801",
+          "description": "Implementación práctica, pruebas de carga y sustentación final del proyecto tecnológico evaluado por jurados externos."
+        },
+        {
+          "code": "SI-1002",
+          "name": "Big Data y Analítica de Datos",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "SI-902",
+          "description": "Procesamiento distribuido con Apache Spark, Hadoop y análisis exploratorio de datos a gran escala."
+        },
+        {
+          "code": "SI-1003",
+          "name": "Computación Cuántica y Tendencias",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "SI-902",
+          "description": "Introducción a los principios de superposición, entrelazamiento cuántico, compuertas cuánticas y algoritmos de Shor y Grover."
+        }
+      ]
+    }
+  ],
+  "graduationRequirements": [
+    "Nivel de Inglés B2 certificado mediante examen estandarizado oficial (IELTS, TOEFL o examen interno)",
+    "320 horas de Prácticas Profesionales industriales aprobadas",
+    "80 horas de Servicio Social comunitario acreditadas",
+    "Aprobación y sustentación pública del Proyecto de Grado - Infraestructura",
+    "Aprobación del 100% de los créditos del plan de estudios (168 créditos)",
+    "Presentación oficial de las pruebas de Estado Saber Pro"
+  ],
+  "annualIncrement": "IPC + 1.5% (Aproximadamente 6.3% anual para el periodo vigente)",
+  "scholarships": [
+    {
+      "name": "Beca Excelencia Académica",
+      "value": "Hasta 50% de descuento en la matrícula ordinaria para promedios semestrales superiores a 4.5."
+    },
+    {
+      "name": "Beca Semilleros de Ciberseguridad",
+      "value": "Descuento del 25% para estudiantes activos en semilleros de investigación en Redes y Ciberseguridad."
+    },
+    {
+      "name": "Beca Convenio de Fidelidad",
+      "value": "15% de descuento para egresados de tecnologías NEXUS que continúen con la ingeniería."
+    }
+  ],
+  "financingOptions": [
+    {
+      "name": "Financiación Directa NEXUS",
+      "value": "Paga el 40% del valor total de la matrícula al inicio del semestre, y el 60% restante en 3 cuotas mensuales con 0% de interés de financiación."
+    },
+    {
+      "name": "Crédito Educativo ICETEX",
+      "value": "Líneas de crédito a corto, mediano y largo plazo. Tasas preferenciales de interés y periodos de gracia de pago tras la graduación (Líneas Tú Eliges)."
+    },
+    {
+      "name": "Convenios Financieros",
+      "value": "Crédito pre-aprobado y desembolso inmediato con entidades aliadas como Sufi (Bancolombia), Banco Pichincha y Fincomercio a tasas muy competitivas."
+    }
+  ],
+  "directory": {
+    "director": {
+      "name": "Dr. Harold Alexis Ordóñez",
+      "email": "h.ordonez@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 220",
+      "office": "Edificio Central, Oficina 405",
+      "hours": "Lunes a Viernes: 9:00 AM - 12:00 PM"
+    },
+    "coordinator": {
+      "name": "Ing. Paula Andrea Salazar",
+      "email": "p.salazar@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 221",
+      "office": "Edificio Central, Oficina 406",
+      "hours": "Lunes a Viernes: 2:00 PM - 5:00 PM"
+    },
+    "tutoring": "Tutorías oficiales especializadas en redes, Linux y ciberseguridad mediante Microsoft Teams. Enlace directo en el canal 'Tutorías Sistemas Informáticos'. Horarios: Lunes y Miércoles 4:00 PM a 6:00 PM.",
+    "regulationsUrl": "https://nexus.edu.co/reglamentos/reglamento-estudiantil-general.pdf"
+  }
+}

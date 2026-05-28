@@ -1,0 +1,327 @@
+{
+  "id": "desarrollo_software",
+  "name": "Desarrollo de Software",
+  "title": "Tecnólogo en Desarrollo de Software",
+  "duration": "6 Semestres",
+  "credits": 108,
+  "modality": "Híbrida (Virtual / Presencial)",
+  "costPerSemester": 4500000,
+  "description": "El programa de Desarrollo de Software forma profesionales expertos en la creación de aplicaciones móviles, web y de escritorio. A través de un enfoque práctico, los estudiantes adquieren conocimientos en lenguajes de programación modernos, bases de datos, metodologías ágiles y computación en la nube, respondiendo a la creciente demanda de la industria de TI global.",
+  "graduateProfile": "Como graduado de NEXUS, serás capaz de diseñar, desarrollar y desplegar arquitecturas de software robustas. Dominarás el control de versiones, la integración continua y el trabajo en equipos ágiles. Tu perfil integral te preparará para resolver problemas complejos a través de soluciones de código eficientes, seguras y escalables.",
+  "careerOpportunities": [
+    {
+      "role": "Desarrollador Full Stack",
+      "description": "Creación y mantenimiento del frontend y backend de aplicaciones web escalables.",
+      "avgSalary": "4.500.000 - 7.000.000 COP"
+    },
+    {
+      "role": "Ingeniero de Software QA",
+      "description": "Garantizar la calidad del software mediante el diseño e implementación de pruebas automatizadas.",
+      "avgSalary": "3.800.000 - 5.500.000 COP"
+    },
+    {
+      "role": "Administrador de Bases de Datos",
+      "description": "Diseñar, optimizar y asegurar la infraestructura de datos relacionales y NoSQL de las organizaciones.",
+      "avgSalary": "4.200.000 - 6.800.000 COP"
+    },
+    {
+      "role": "Desarrollador de Aplicaciones Móviles",
+      "description": "Desarrollo de experiencias interactivas nativas e híbridas para Android e iOS.",
+      "avgSalary": "4.500.000 - 7.500.000 COP"
+    }
+  ],
+  "semesters": [
+    {
+      "number": 1,
+      "subjects": [
+        {
+          "code": "DS-101",
+          "name": "Lógica de Programación",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Fundamentos de algoritmos, diagramas de flujo, pseudocódigo y estructuras de control básicas (secuenciales, condicionales y cíclicas)."
+        },
+        {
+          "code": "DS-102",
+          "name": "Introducción a la Tecnología",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Historia de la computación, arquitectura básica de computadores, sistemas operativos y fundamentos de redes e Internet."
+        },
+        {
+          "code": "MAT-101",
+          "name": "Matemática Básica",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "Ninguno",
+          "description": "Álgebra elemental, funciones, trigonometría y resolución de problemas cuantitativos aplicados a la computación."
+        },
+        {
+          "code": "HUM-101",
+          "name": "Competencias Comunicativas",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Técnicas de redacción, oratoria, lectura crítica y comunicación asertiva en entornos laborales y académicos."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "subjects": [
+        {
+          "code": "DS-201",
+          "name": "Programación Orientada a Objetos",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "DS-101",
+          "description": "Clases, objetos, herencia, polimorfismo, abstracción y encapsulamiento. Uso de lenguajes como Java o C#."
+        },
+        {
+          "code": "DS-202",
+          "name": "Bases de Datos Relacionales",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "DS-102",
+          "description": "Modelo entidad-relación, normalización de datos y consultas avanzadas mediante lenguaje estructurado SQL (PostgreSQL/MySQL)."
+        },
+        {
+          "code": "MAT-201",
+          "name": "Cálculo Diferencial",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-101",
+          "description": "Límites, continuidad, derivadas y sus aplicaciones para optimización de funciones computacionales."
+        },
+        {
+          "code": "HUM-201",
+          "name": "Ética Profesional",
+          "credits": 2,
+          "hours": 32,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Análisis de dilemas morales en la industria del software, propiedad intelectual, privacidad de datos e impacto social de la IA."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "subjects": [
+        {
+          "code": "DS-301",
+          "name": "Estructuras de Datos",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "DS-201",
+          "description": "Pilas, colas, listas enlazadas, árboles, grafos y algoritmos de ordenamiento y búsqueda de alta eficiencia."
+        },
+        {
+          "code": "DS-302",
+          "name": "Desarrollo Web Frontend",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "DS-201",
+          "description": "Maquetado web avanzado en HTML5, CSS moderno (Flexbox/Grid), Javascript ES6 y consumo de APIs mediante peticiones asíncronas."
+        },
+        {
+          "code": "DS-303",
+          "name": "Bases de Datos NoSQL",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "DS-202",
+          "description": "Almacenamiento clave-valor, documental y de grafos empleando tecnologías modernas como MongoDB y Redis."
+        },
+        {
+          "code": "MAT-301",
+          "name": "Álgebra Lineal",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "MAT-201",
+          "description": "Matrices, determinantes, sistemas de ecuaciones lineales y espacios vectoriales para el procesamiento gráfico y computacional."
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "subjects": [
+        {
+          "code": "DS-401",
+          "name": "Desarrollo Web Backend",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "DS-301, DS-302",
+          "description": "Creación de APIs RESTful usando arquitecturas MVC en entornos Node.js (Express), Python (Django/FastAPI) o C# (.NET Core)."
+        },
+        {
+          "code": "DS-402",
+          "name": "Ingeniería de Requisitos",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "DS-201",
+          "description": "Técnicas de elicitación, documentación y validación de requisitos de software bajo estándares internacionales."
+        },
+        {
+          "code": "DS-403",
+          "name": "Arquitectura de Software",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "DS-301",
+          "description": "Patrones de diseño de software comunes (MVC, Microservicios, Serverless, Onion) para la estructuración de sistemas robustos."
+        },
+        {
+          "code": "DS-404",
+          "name": "Desarrollo Móvil Android",
+          "credits": 4,
+          "hours": 64,
+          "type": "Electiva",
+          "prerequisites": "DS-301",
+          "description": "Desarrollo móvil nativo para el ecosistema Android utilizando Kotlin y Jetpack Compose."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "subjects": [
+        {
+          "code": "DS-501",
+          "name": "Metodologías de Desarrollo (Ágiles)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "DS-402",
+          "description": "Gestión de proyectos tecnológicos con Scrum, Kanban y Extreme Programming (XP), roles de equipo y planeación de Sprints."
+        },
+        {
+          "code": "DS-502",
+          "name": "Pruebas de Software (QA)",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "DS-401",
+          "description": "Pruebas unitarias, de integración, end-to-end, y automatización con frameworks modernos como Jest, Cypress y Selenium."
+        },
+        {
+          "code": "DS-503",
+          "name": "Computación en la Nube y DevOps",
+          "credits": 4,
+          "hours": 64,
+          "type": "Obligatoria",
+          "prerequisites": "DS-401",
+          "description": "Conceptos de IaaS, PaaS y SaaS. Uso de AWS/Azure, Docker para contenerización y flujos CI/CD con GitHub Actions."
+        },
+        {
+          "code": "DS-504",
+          "name": "Desarrollo Móvil iOS",
+          "credits": 4,
+          "hours": 64,
+          "type": "Electiva",
+          "prerequisites": "DS-301",
+          "description": "Fundamentos y creación de aplicaciones nativas para el sistema operativo iOS usando Swift y SwiftUI."
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "subjects": [
+        {
+          "code": "DS-601",
+          "name": "Proyecto Integrador (Grado)",
+          "credits": 6,
+          "hours": 96,
+          "type": "Obligatoria",
+          "prerequisites": "Haber aprobado el 80% de créditos",
+          "description": "Formulación, desarrollo e implementación de un proyecto de software funcional y real que solucione una problemática de la industria."
+        },
+        {
+          "code": "DS-602",
+          "name": "Seguridad en Aplicaciones",
+          "credits": 3,
+          "hours": 48,
+          "type": "Obligatoria",
+          "prerequisites": "DS-503",
+          "description": "Identificación de vulnerabilidades según el top 10 de OWASP, criptografía aplicada y buenas prácticas de codificación segura."
+        },
+        {
+          "code": "DS-603",
+          "name": "Cultura Emprendedora",
+          "credits": 3,
+          "hours": 48,
+          "type": "Electiva",
+          "prerequisites": "Ninguno",
+          "description": "Modelo Canvas, formulación de planes de negocio tecnológico, propiedad intelectual y pitch de ventas para startups."
+        }
+      ]
+    }
+  ],
+  "graduationRequirements": [
+    "Nivel de Inglés B1 o superior certificado por el Instituto de Lenguas",
+    "240 horas de Prácticas Profesionales empresariales aprobadas",
+    "60 horas de Servicio Social comunitario acreditadas",
+    "Aprobación y sustentación pública del Proyecto Integrador (Grado)",
+    "Aprobación del 100% de los créditos del plan de estudios (108 créditos)",
+    "Presentación oficial de las pruebas de Estado Saber TyT"
+  ],
+  "annualIncrement": "IPC + 1.2% (Aproximadamente 6.0% anual para el periodo vigente)",
+  "scholarships": [
+    {
+      "name": "Beca Excelencia Académica",
+      "value": "Hasta 50% de descuento en la matrícula ordinaria para promedios semestrales superiores a 4.5."
+    },
+    {
+      "name": "Beca Mujeres en Tecnología (STEM)",
+      "value": "Descuento del 30% en toda la carrera para incentivar la participación femenina en el sector TI."
+    },
+    {
+      "name": "Beca Convenio MinTIC",
+      "value": "Financiación condonable de hasta el 80% sujeta a promedio académico mínimo de 4.0 y culminación exitosa."
+    }
+  ],
+  "financingOptions": [
+    {
+      "name": "Financiación Directa NEXUS",
+      "value": "Paga el 40% del valor total de la matrícula al inicio del semestre, y el 60% restante en 3 cuotas mensuales con 0% de interés de financiación."
+    },
+    {
+      "name": "Crédito Educativo ICETEX",
+      "value": "Líneas de crédito a corto, mediano y largo plazo. Tasas preferenciales de interés y periodos de gracia de pago tras la graduación (Líneas Tú Eliges)."
+    },
+    {
+      "name": "Convenios Financieros",
+      "value": "Crédito pre-aprobado y desembolso inmediato con entidades aliadas como Sufi (Bancolombia), Banco Pichincha y Fincomercio a tasas muy competitivas."
+    }
+  ],
+  "directory": {
+    "director": {
+      "name": "Ing. Claudia Milena Restrepo",
+      "email": "c.restrepo@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 210",
+      "office": "Edificio Central, Oficina 402",
+      "hours": "Lunes a Viernes: 2:00 PM - 5:00 PM"
+    },
+    "coordinator": {
+      "name": "Ing. Andrés Felipe Muñoz",
+      "email": "a.munoz@nexus.edu.co",
+      "phone": "+57 (601) 321-4567 Ext. 211",
+      "office": "Edificio Central, Oficina 403",
+      "hours": "Lunes a Jueves: 9:00 AM - 12:00 PM"
+    },
+    "tutoring": "Sesiones semanales de tutorías académicas y técnicas a través de Microsoft Teams en el canal 'Tutorías Software - NEXUS'. Horarios fijos: Martes y Jueves de 9:00 AM a 11:00 AM.",
+    "regulationsUrl": "https://nexus.edu.co/reglamentos/reglamento-estudiantil-general.pdf"
+  }
+}
