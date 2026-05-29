@@ -10,7 +10,7 @@ export default function Banner({ careerData }) {
       <div className="banner-glow"></div>
       <div className="banner-content">
         <span className="banner-badge">Pregrado</span>
-        <h2 className="banner-title">{careerData.name}</h2>
+        <h2 className="banner-title">{careerData.name || careerData.title}</h2>
         <p className="banner-subtitle">{careerData.description}</p>
         
         <div className="banner-stats-grid">
@@ -25,7 +25,7 @@ export default function Banner({ careerData }) {
             <Award />
             <div className="stat-info">
               <span className="stat-label">Créditos Totales</span>
-              <span className="stat-value">{careerData.credits} Créditos</span>
+              <span className="stat-value">{careerData.credits || "108"} Créditos</span>
             </div>
           </div>
           <div className="banner-stat">
@@ -39,7 +39,9 @@ export default function Banner({ careerData }) {
             <CreditCard />
             <div className="stat-info">
               <span className="stat-label">Costo Semestre</span>
-              <span className="stat-value">{formatCOP(careerData.costPerSemester)}</span>
+              <span className="stat-value">
+                {careerData.price || formatCOP(careerData.costPerSemester) || "$ 4.500.000 COP"}
+              </span>
             </div>
           </div>
         </div>

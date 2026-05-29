@@ -81,7 +81,7 @@ export default function StudentPrograma() {
         .catch(err => {
           console.error('Error loading fallback user database:', err);
           setError('No hay sesión de estudiante activa y no se pudo conectar con el demo.');
-          setLoading(false);
+          loading(false);
         });
     }
   }, []);
@@ -140,9 +140,9 @@ export default function StudentPrograma() {
   if (error) {
     return (
       <StudentLayout>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '50vh', gap: '16px', textAlign: 'center' }}>
-          <h2 style={{ color: '#ef4444' }}>Error de Carga</h2>
-          <p style={{ color: '#475569' }}>{error}</p>
+        <div className="error-view-container">
+          <h2 className="error-title">Error de Carga</h2>
+          <p className="error-message">{error}</p>
           <button className="btn-primary" onClick={() => window.location.reload()}>Recargar portal</button>
         </div>
       </StudentLayout>
@@ -153,7 +153,7 @@ export default function StudentPrograma() {
 
   return (
     <StudentLayout>
-      <div className="student-programa-view" style={{ width: '100%' }}>
+      <div className="student-programa-view">
         
         {/* Demo switcher bar - only shown if no active session is in localStorage */}
         {isDemoFallback && (
@@ -176,17 +176,11 @@ export default function StudentPrograma() {
         )}
 
         {loading ? (
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
-              <div style={{ border: '4px solid #e2e8f0', borderTop: '4px solid #0066ff', borderRadius: '50%', width: '40px', height: '40px', animation: 'spin 1s linear infinite' }}></div>
-              <span style={{ color: '#64748b', fontSize: '14px', fontWeight: 500 }}>Cargando información del programa académico...</span>
+          <div className="loading-view-container">
+            <div className="loading-content">
+              <div className="spinner-element"></div>
+              <span className="loading-text">Cargando información del programa académico...</span>
             </div>
-            <style>{`
-              @keyframes spin {
-                0% { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-              }
-            `}</style>
           </div>
         ) : (
           <>

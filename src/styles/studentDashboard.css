@@ -1,71 +1,71 @@
+/* ========================================
+   STUDENT DASHBOARD — Estilos Adaptados
+   ======================================== */
+
 .student-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
   max-width: 100%;
-
   overflow-x: hidden;
 }
-
 
 /* HEADER */
 
 .student-header h1 {
-  font-size: 42px;
+  font-size: 32px;
+  font-weight: 700;
   color: #0f172a;
-  margin-bottom: 8px;
+  margin: 0 0 6px 0;
 }
 
 .student-header p {
   color: #64748b;
-  font-size: 16px;
+  font-size: 15px;
+  margin: 0;
 }
 
 /* CARDS */
 
 .student-cards {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(240px, 1fr));
-
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
 }
 
 .student-card {
   background: white;
-
-  border-radius: 20px;
-
+  border-radius: 18px;
   padding: 24px;
-
   display: flex;
   gap: 18px;
-
   align-items: center;
-
-  box-shadow:
-    0 4px 14px rgba(0,0,0,0.06);
-
-  transition: 0.3s;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.22s, box-shadow 0.22s;
 }
 
 .student-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
 }
 
 .student-card span {
-  font-size: 14px;
+  font-size: 13px;
   color: #64748b;
 }
 
 .student-card h3 {
   font-size: 24px;
+  font-weight: 700;
   color: #0f172a;
-  margin: 5px 0;
+  margin: 4px 0;
 }
 
 .student-card p {
   color: #64748b;
   font-size: 14px;
+  margin: 0;
 }
 
 /* ICONOS */
@@ -73,43 +73,24 @@
 .icon-box {
   width: 60px;
   height: 60px;
-
   border-radius: 16px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 24px;
+  flex-shrink: 0;
 }
 
-.green {
-  background: #dcfce7;
-  color: #16a34a;
-}
-
-.blue {
-  background: #dbeafe;
-  color: #2563eb;
-}
-
-.purple {
-  background: #ede9fe;
-  color: #7c3aed;
-}
-
-.yellow {
-  background: #fef3c7;
-  color: #f59e0b;
-}
+.green   { background: #dcfce7; color: #16a34a; }
+.blue    { background: #dbeafe; color: #2563eb; }
+.purple  { background: #ede9fe; color: #7c3aed; }
+.yellow  { background: #fef3c7; color: #f59e0b; }
 
 /* GRID */
 
 .dashboard-grid {
   display: grid;
-
   grid-template-columns: 2fr 1fr;
-
   gap: 20px;
 }
 
@@ -119,20 +100,18 @@
 .next-class,
 .resume-section {
   background: white;
-
   border-radius: 20px;
-
-  padding: 25px;
-
-  box-shadow:
-    0 4px 14px rgba(0,0,0,0.06);
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .progress-card h2,
 .next-class h2,
 .resume-section h2 {
-  margin-bottom: 25px;
+  font-size: 20px;
+  font-weight: 700;
   color: #0f172a;
+  margin: 0 0 20px 0;
 }
 
 /* TIMELINE */
@@ -145,25 +124,18 @@
 
 .timeline-item {
   flex: 1;
-
   text-align: center;
-
   position: relative;
 }
 
 .timeline-item::after {
   content: "";
-
   position: absolute;
-
   top: 12px;
   left: 60%;
-
   width: 100%;
   height: 3px;
-
   background: #e2e8f0;
-
   z-index: 1;
 }
 
@@ -174,177 +146,135 @@
 .circle {
   width: 25px;
   height: 25px;
-
   border-radius: 50%;
-
-  background: #22c55e;
-
-  margin: auto auto 10px;
-
+  background: #16a34a;
+  margin: 0 auto 10px;
   position: relative;
   z-index: 2;
 }
 
 .timeline-item span {
-  font-size: 13px;
+  font-size: 12px;
   color: #475569;
+  font-weight: 500;
 }
 
 /* NEXT CLASS */
 
 .class-box h3 {
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 700;
   color: #0f172a;
 }
 
 .class-box p {
   color: #64748b;
-  margin-top: 8px;
+  margin-top: 6px;
+  font-size: 14px;
 }
 
 /* RESUMEN */
 
 .resume-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(200px, 1fr));
-
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
 }
 
 .resume-card {
   background: #f8fafc;
-
   border-radius: 16px;
-
   padding: 20px;
-
   text-align: center;
+  border: 1px solid #f1f5f9;
 }
 
 .resume-card h3 {
+  font-size: 14px;
   color: #64748b;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .resume-card p {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 800;
   color: #2563eb;
+  margin: 0;
 }
 
-/* ================= PROGRESO ACADÉMICO ================= */
-
-.progress-card {
-  background: white;
-
-  padding: 28px;
-
-  border-radius: 24px;
-
-  box-shadow:
-    0 10px 25px rgba(0,0,0,0.06);
-
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-
-.progress-card h2 {
-  font-size: 24px;
-  color: #0f172a;
-}
-
-/* INFO SUPERIOR */
+/* PROGRESO ACADÉMICO */
 
 .progress-info {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 4px;
 }
 
 .progress-label {
-  font-size: 14px;
+  font-size: 13px;
   color: #64748b;
 }
 
 .progress-info h3 {
   margin-top: 4px;
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 700;
   color: #0f172a;
 }
 
 .progress-percent {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
   color: #2563eb;
 }
 
-/* BARRA */
-
-/* CONTENEDOR */
+/* BARRA CONTENEDOR */
 
 .progress-container {
   display: grid;
-
   grid-template-columns: 1fr auto;
-
   align-items: center;
-
   gap: 14px;
-
   width: 100%;
 }
 
 /* BARRA */
 
 .progress-bar {
-  flex: 1;
-
-  height: 16px;
-
+  height: 14px;
   background: #e2e8f0;
-
   border-radius: 999px;
-
   overflow: hidden;
-
   width: 100%;
 }
 
-/* PROGRESO */
+/* PROGRESO FILL */
 
 .progress-fill {
   height: 100%;
-
-  background: linear-gradient(
-    90deg,
-    #06b6d4,
-    #2563eb
-  );
-
+  background: linear-gradient(90deg, #06b6d4, #2563eb);
   border-radius: 999px;
-
-  transition: 0.4s ease;
+  transition: width 0.4s ease;
 }
 
 /* PORCENTAJE */
 
 .progress-number {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: #2563eb;
-
-  min-width: 45px;
+  min-width: 40px;
+  text-align: right;
 }
 
-/* TEXTO */
+/* TEXTO DE DESCRIPCIÓN */
 
 .progress-description {
-  font-size: 14px;
+  font-size: 13px;
   color: #64748b;
   line-height: 1.5;
+  margin: 0;
 }
 
 .progress-top {
@@ -354,158 +284,61 @@
   gap: 20px;
 }
 
-/* ================= NEXT CLASS ================= */
-
-.next-class {
-  background: white;
-  border-radius: 22px;
-  padding: 25px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-}
+/* NEXT CLASS INTERNA */
 
 .next-class-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin-bottom: 20px;
 }
 
 .next-class-header h2 {
-  font-size: 22px;
-  color: #0f172a;
-}
-
-.calendar-icon {
-  font-size: 24px;
-  color: #2563eb;
-}
-
-.class-box {
-  background: linear-gradient(
-    135deg,
-    #eff6ff,
-    #dbeafe
-  );
-
-  border-radius: 18px;
-
-  padding: 22px;
-}
-
-.class-box h3 {
-  font-size: 22px;
-  color: #0f172a;
-
-  margin-bottom: 10px;
-}
-
-.class-box p {
-  color: #475569;
-  margin-bottom: 15px;
-}
-
-.class-date {
-  display: inline-block;
-
-  background: #2563eb;
-  color: white;
-
-  padding: 8px 14px;
-
-  border-radius: 30px;
-
-  font-size: 13px;
-  font-weight: 600;
-}
-/* ================= NEXT CLASS ================= */
-
-.next-class {
-  background: white;
-  border-radius: 24px;
-  padding: 28px;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.06);
-
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-/* HEADER */
-
-.next-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.next-header h2 {
-  font-size: 24px;
+  font-size: 20px;
   color: #0f172a;
   margin: 0;
 }
 
-/* ICON */
-
 .calendar-icon {
-  width: 55px;
-  height: 55px;
-
-  border-radius: 18px;
-
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background:
-    linear-gradient(135deg, #2563eb, #06b6d4);
-
+  background: linear-gradient(135deg, #2563eb, #06b6d4);
   color: white;
-  font-size: 22px;
-
-  box-shadow:
-    0 10px 20px rgba(37,99,235,0.25);
+  font-size: 20px;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.2);
 }
 
-/* BOX */
-
 .class-box {
-  background:
-    linear-gradient(
-      135deg,
-      #eff6ff,
-      #f8fafc
-    );
-
-  border-radius: 20px;
-
-  padding: 24px;
-
+  background: linear-gradient(135deg, #eff6ff, #f8fafc);
+  border-radius: 18px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  transition: 0.3s ease;
+  transition: transform 0.22s ease;
+  border-left: 4px solid #2563eb;
 }
 
 .class-box:hover {
   transform: translateY(-3px);
 }
 
-/* INFO */
+/* INFO INTERNA CLASE */
 
 .class-info h3 {
   margin: 0;
-  font-size: 22px;
+  font-size: 18px;
   color: #0f172a;
 }
 
 .class-info p {
-  margin-top: 8px;
+  margin-top: 6px;
   color: #64748b;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* HORA */
@@ -514,61 +347,51 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  flex-shrink: 0;
 }
 
 .class-time span {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
   color: #2563eb;
 }
 
 .class-time small {
-  margin-top: 6px;
-
+  margin-top: 4px;
   background: white;
-
-  padding: 6px 12px;
-
-  border-radius: 30px;
-
+  padding: 4px 10px;
+  border-radius: 999px;
   color: #334155;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
-/* HEADER PROGRESO */
+/* HEADER PROGRESO ADICIONALES */
 
 .progress-title-row {
   display: flex;
-
   justify-content: space-between;
-
   align-items: flex-start;
-
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
 .progress-title-row h2 {
   margin: 0;
-
   line-height: 1;
 }
 
 /* BADGE SEMESTRE */
 
 .semester-badge {
-  color: #4e4e4e;
-
-  padding: 6px 16px;
-
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 14px;
   border-radius: 999px;
-
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .student-dashboard {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  background: transparent !important; /* Elimina cualquier fondo blanco de la vista */
 }

@@ -1,8 +1,7 @@
 .student-layout {
   display: flex;
   min-height: 100vh;
-  background: #f4f7fb;
-
+  background-color: #f4f7fb !important; /* Asegura el fondo gris en toda la app */
   overflow-x: hidden;
 }
 
@@ -11,23 +10,103 @@
   width: 260px;
   min-width: 260px;
   height: 100vh;
-
   position: fixed;
   left: 0;
   top: 0;
 }
 
-/* CONTENIDO */
+/* CONTENIDO PRINCIPAL */
 .student-content {
   flex: 1;
-
   margin-left: 260px;
-
-  padding: 30px;
-
-  width: 100%;
-
+  padding: 40px; /* Un poco más de aire para mejorar el diseño */
+  width: calc(100% - 260px);
   box-sizing: border-box;
-
   overflow-x: hidden;
+  background-color: #f4f7fb; /* Mantiene el fondo gris de fondo */
+}
+
+/* REGLAS DE UNIFICACIÓN ESTILO "HORARIO" 
+   Fuerza a que todas las tarjetas de la app hereden el mismo comportamiento
+*/
+.student-card,
+.progress-card,
+.next-class,
+.resume-section,
+.profile-card,
+.resume-card {
+  background: #ffffff !important; /* Obliga a las tarjetas a ser blanco puro */
+  border: 1px solid #eef2f6 !important; /* Borde suave idéntico al de Horarios */
+  border-radius: 16px !important; /* Curvatura limpia */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important; /* Sombra sutil */
+}
+
+/* ==========================================================================
+   UNIFICACIÓN TIPOGRÁFICA EXCLUSIVA DEL CONTENIDO (ESTILO "HORARIO")
+   ========================================================================== */
+
+/* 1. TÍTULOS PRINCIPALES (Ej: "MI HORARIO", "Hola, Ana Gómez") */
+.student-content h1,
+.student-content .student-header h1 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 26px !important;       /* Tamaño compacto y elegante */
+  font-weight: 800 !important;       /* Peso fuerte pero refinado */
+  color: #0f172a !important;         /* Azul marino muy oscuro / Slate 900 */
+  letter-spacing: -0.5px !important; 
+  text-transform: uppercase !important; 
+}
+
+/* 2. SUBTÍTULOS DE LAS TARJETAS (Ej: "Mi progreso académico", "Próxima clase") */
+.student-content h2,
+.student-content .progress-card h2,
+.student-content .next-class h2,
+.student-content .resume-section h2,
+.student-content .profile-card h2 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 16px !important;       /* Estético, no desproporcionado */
+  font-weight: 700 !important;
+  color: #0f172a !important;         
+  margin-bottom: 16px !important;
+}
+
+/* 3. TÍTULOS INTERNOS DE TARJETAS Y LABELS (Ej: "React Avanzado", "Nombre completo") */
+.student-content h3,
+.student-content .class-info h3,
+.student-content .student-card h3,
+.student-content .input-group label,
+.student-content .academic-box h3 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;       /* Idéntico al tamaño de los cursos en Horario */
+  font-weight: 700 !important;
+  color: #0f172a !important;
+}
+
+/* 4. TEXTOS SECUNDARIOS Y DESCRIPCIONES (Ej: "Ingeniería de Software", "Aula 204") */
+.student-content p,
+.student-content span,
+.student-content small,
+.student-content .student-header p,
+.student-content .class-info p,
+.student-content .student-card p,
+.student-content .profile-info p {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 13px !important;       
+  font-weight: 500 !important;
+  color: #64748b !important;         /* Gris azulado de Horarios */
+}
+
+/* 5. INPUTS DEL PERFIL (Para evitar que hereden fuentes gigantes de otros lados) */
+.student-content .input-group input {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  color: #0f172a !important;
+}
+
+/* 6. VALORES DESTACADOS (Ej: "8:00 AM", créditos, promedios) */
+.student-content .class-time span,
+.student-content .progress-number,
+.student-content .resume-card p {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+  color: #2563eb !important;         /* Azul de la marca */
+  font-weight: 700 !important;
 }
