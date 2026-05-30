@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaSearch, FaEdit, FaTrash, FaPlus, FaTimes } from "react-icons/fa";
 import { careers } from "../data/career";
+import { apiFetch, endpoints } from "../services/api";
 import "../styles/Postulantes.css";
 import "../styles/Cursos.css";
 
@@ -19,13 +20,26 @@ const FORM_VACIO = {
 };
 
 export default function Cursos() {
-  const [cursos, setCursos] = useState(CURSOS_MOCK);
+  const [cursos, setCursos] = useState([]);
   const [busqueda, setBusqueda] = useState("");
   const [filtroDisp, setFiltroDisp] = useState("Todos");
   const [modal, setModal] = useState(null); // null | "crear" | "editar" | "eliminar"
   const [cursoSeleccionado, setCursoSeleccionado] = useState(null);
   const [form, setForm] = useState(FORM_VACIO);
   const [error, setError] = useState("");
+
+  const cargarCursos = async () => {
+    try {
+      const data = await apiFetch(endpoints.cursos + "?size=100");
+      setCursos(data.content || data || []);
+    } catch (err) {
+      console.error("Error al cargar cursos:", err);
+    }
+  };
+
+  useEffect(() => {
+    cargarCursos();
+  }, []);
 
   // Stats
   const total = cursos.length;
@@ -85,39 +99,61 @@ export default function Cursos() {
     return true;
   };
 
-  const guardarCurso = () => {
+  const guardarCurso = async () => {
     if (!validar()) return;
 
     const cuposNum = parseInt(form.cuposMaximos);
-    const dispNum = modal === "editar" ? cursoSeleccionado.cuposDisponibles : cuposNum;
-    let disp = "DISPONIBLE";
-    if (dispNum === 0) disp = "AGOTADO";
-    else if (dispNum <= 5) disp = "últimos cupos disponibles!";
 
-    if (modal === "crear") {
-      const nuevo = {
-        ...form,
-        id: Date.now(),
-        cuposDisponibles: cuposNum,
-        cuposMaximos: cuposNum,
-        duracionHoras: parseInt(form.duracionHoras),
-        precio: parseFloat(form.precio),
-        mensajeDisponibilidad: disp,
-      };
-      setCursos(prev => [...prev, nuevo]);
-    } else {
-      setCursos(prev => prev.map(c =>
-        c.id === cursoSeleccionado.id
-          ? { ...c, ...form, duracionHoras: parseInt(form.duracionHoras), precio: parseFloat(form.precio), cuposMaximos: cuposNum, mensajeDisponibilidad: disp }
-          : c
-      ));
+    try {
+      if (modal === "crear") {
+        const nuevo = {
+          nombre: form.nombre,
+          categoria: form.categoria,
+          duracionHoras: parseInt(form.duracionHoras),
+          cuposMaximos: cuposNum,
+          precio: parseFloat(form.precio),
+          instructor: form.instructor,
+          activo: "ACTIVO"
+        };
+        await apiFetch(endpoints.cursos, {
+          method: "POST",
+          body: JSON.stringify(nuevo)
+        });
+      } else {
+        const editado = {
+          nombre: form.nombre,
+          categoria: form.categoria,
+          duracionHoras: parseInt(form.duracionHoras),
+          cuposMaximos: cuposNum,
+          cuposDisponibles: parseInt(form.cuposDisponibles),
+          precio: parseFloat(form.precio),
+          instructor: form.instructor,
+          activo: form.activo || "ACTIVO"
+        };
+        await apiFetch(`${endpoints.cursos}/${cursoSeleccionado.id}`, {
+          method: "PUT",
+          body: JSON.stringify(editado)
+        });
+      }
+      cargarCursos();
+      cerrarModal();
+    } catch (err) {
+      console.error(err);
+      setError(err.message || "Error al guardar el curso.");
     }
-    cerrarModal();
   };
 
-  const eliminarCurso = () => {
-    setCursos(prev => prev.filter(c => c.id !== cursoSeleccionado.id));
-    cerrarModal();
+  const eliminarCurso = async () => {
+    try {
+      await apiFetch(`${endpoints.cursos}/${cursoSeleccionado.id}`, {
+        method: "DELETE"
+      });
+      cargarCursos();
+      cerrarModal();
+    } catch (err) {
+      console.error(err);
+      alert("Error al eliminar el curso.");
+    }
   };
 
   return (

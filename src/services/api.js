@@ -1,11 +1,13 @@
 // src/services/api.js
 
-const API_URL = "http://localhost:8080/api";
+const API_URL = "http://localhost:8080/api/v1";
 
 export const endpoints = {
-  login: "/usuarios",
-  registro: "/usuarios",
-  inscripcion: "/inscripciones",
+  login: "/usuarios/login",
+  registro: "/usuarios/registro",
+  inscripcion: "/requests",
+  cursos: "/cursos",
+  usuarios: "/usuarios",
 };
 
 export const apiFetch = async (endpoint, options = {}) => {
@@ -17,7 +19,12 @@ export const apiFetch = async (endpoint, options = {}) => {
   });
 
   if (!response.ok) {
-    throw new Error("Error en la petición");
+    const errorMsg = await response.text().catch(() => "Error en la petición");
+    throw new Error(errorMsg || "Error en la petición");
+  }
+
+  if (response.status === 204) {
+    return null;
   }
 
   return response.json();
