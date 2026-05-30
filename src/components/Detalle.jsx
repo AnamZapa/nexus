@@ -4,7 +4,6 @@ import { careers } from "../data/career";
 import "../styles/career.css";
 
 function Detalle() {
-
   const { id } = useParams();
 
   const career = careers.find(
@@ -16,14 +15,11 @@ function Detalle() {
   }
 
   return (
-
     <div
       className="career-page"
       style={{ backgroundImage: `url(${career.image})` }}
     >
-
       <div className="career-container">
-
         <h1 className="career-title">
           {career.title}
         </h1>
@@ -46,6 +42,7 @@ function Detalle() {
           <li><strong>Duración:</strong> {career.duration}</li>
           <li><strong>Modalidad:</strong> {career.modality}</li>
           <li><strong>Jornada:</strong> {career.schedule}</li>
+          <li><strong>Costo Semestre:</strong> {career.price}</li>
         </ul>
 
         <h2 className="section-title">Requisitos</h2>
@@ -65,9 +62,7 @@ function Detalle() {
             Inscribirme
           </Link>
         </div>
-
       </div>
-
     </div>
   );
 }

@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <footer className="footer-nexus py-4">
+        <footer 
+            className="footer-nexus py-4" 
+            style={{ 
+                position: 'fixed', 
+                bottom: 0, 
+                left: 0, 
+                width: '100%', 
+                zIndex: 1000 
+            }}
+        >
             <div className="footer-container">
                 <div className="footer-item">
                     <i className="bi bi-telephone-fill"></i>
