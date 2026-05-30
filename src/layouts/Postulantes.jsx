@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
     FaCheckCircle,
@@ -7,6 +7,7 @@ import {
     FaSearch
 } from "react-icons/fa";
 
+import { apiFetch, endpoints } from "../services/api";
 import "../styles/Postulantes.css";
 import AdminLayout from "./AdminLayout";
 
@@ -55,7 +56,7 @@ const postulantesIniciales = [
 export default function Postulantes() {
 
     const [postulantes, setPostulantes] =
-        useState(postulantesIniciales);
+        useState([]);
 
     const [busqueda, setBusqueda] =
         useState("");
@@ -69,38 +70,53 @@ export default function Postulantes() {
     const [postulanteSeleccionado, setPostulanteSeleccionado] =
         useState(null);
 
+    const cargarPostulantes = async () => {
+        try {
+            const data = await apiFetch(endpoints.inscripcion);
+            const mapped = data.map((p) => {
+                const carrera = p.programaInteres ? p.programaInteres.split("\n")[0].replace("Primer programa: ", "") : "";
+                const estado = p.estado === "APROBADO" ? "Aprobado" : p.estado === "RECHAZADO" ? "Rechazado" : "Pendiente";
+                return {
+                    id: p.id,
+                    nombre: p.nombreCompleto,
+                    carrera: carrera,
+                    correo: p.email || "",
+                    estado: estado,
+                    createdAt: p.fechaCreacion ? p.fechaCreacion.replace("T", " ").substring(0, 16) : "",
+                    updatedAt: p.fechaCreacion ? p.fechaCreacion.replace("T", " ").substring(0, 16) : "",
+                    historial: [
+                        { estado: "Registrado", fecha: p.fechaCreacion ? p.fechaCreacion.replace("T", " ").substring(0, 16) : "" },
+                        { estado: estado, fecha: p.fechaCreacion ? p.fechaCreacion.replace("T", " ").substring(0, 16) : "" }
+                    ]
+                };
+            });
+            setPostulantes(mapped);
+        } catch (err) {
+            console.error("Error al cargar postulantes:", err);
+        }
+    };
+
+    useEffect(() => {
+        cargarPostulantes();
+    }, []);
+
     // 📊 DASHBOARD STATS
     const total = postulantes.length;
     const pendientes = postulantes.filter(p => p.estado === "Pendiente").length;
     const aprobados = postulantes.filter(p => p.estado === "Aprobado").length;
     const rechazados = postulantes.filter(p => p.estado === "Rechazado").length;
 
-    const cambiarEstado = (id, nuevoEstado) => {
-
-        const actualizados = postulantes.map((p) => {
-
-            if (p.id === id) {
-
-                const nuevoHistorial = [
-                    ...p.historial,
-                    {
-                        estado: nuevoEstado,
-                        fecha: new Date().toLocaleString()
-                    }
-                ];
-
-                return {
-                    ...p,
-                    estado: nuevoEstado,
-                    updatedAt: new Date().toLocaleString(),
-                    historial: nuevoHistorial
-                };
-            }
-
-            return p;
-        });
-
-        setPostulantes(actualizados);
+    const cambiarEstado = async (id, nuevoEstado) => {
+        try {
+            const apiEstado = nuevoEstado === "Aprobado" ? "APROBADO" : "RECHAZADO";
+            await apiFetch(`${endpoints.inscripcion}/${id}/estado?estado=${apiEstado}`, {
+                method: "PUT"
+            });
+            cargarPostulantes();
+        } catch (err) {
+            console.error(err);
+            alert("Error al cambiar el estado del postulante.");
+        }
     };
 
     const abrirModal = (postulante) => {

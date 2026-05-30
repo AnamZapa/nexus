@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import logoNexus from "../assets/imagenes/logo nexus blanco-01.png";
 import fondoPantalla from "../assets/imagenes/Fondo Página.jpeg";
+import { apiFetch, endpoints } from "../services/api";
 
 // ── Usuarios MOCK ──
 const USUARIOS = [
@@ -113,45 +114,37 @@ export default function Login() {
 
     setError("");
 
-    // Buscar usuario
-    const usuario = USUARIOS.find(
-      (u) =>
-        u.email === email &&
-        u.password === password &&
-        u.rol === rol
-    );
+    try {
+      const usuario = await apiFetch(endpoints.login, {
+        method: "POST",
+        body: JSON.stringify({ email, password, rol }),
+      });
 
-    if (usuario) {
+      if (usuario) {
+        // Guardar sesión
+        localStorage.setItem(
+          "token",
+          "real-token-nexus"
+        );
 
-      // Guardar sesión
-      localStorage.setItem(
-        "token",
-        "mock-token"
-      );
+        // Guardar usuario
+        localStorage.setItem(
+          "user",
+          JSON.stringify(usuario)
+        );
 
-      // Guardar usuario
-      localStorage.setItem(
-        "user",
-        JSON.stringify(usuario)
-      );
-
-      // Redirecciones
-      if (usuario.rol === "admin") {
-
-        navigate("/dashboard");
-
-      } else {
-
-        navigate("/student");
-
+        // Redirecciones
+        if (usuario.rol === "admin") {
+          navigate("/dashboard");
+        } else {
+          navigate("/student");
+        }
       }
-
-    } else {
-
+    } catch (err) {
+      console.error(err);
       setError(
-        "Credenciales incorrectas."
+        err.message || "Credenciales incorrectas."
       );
-
     }
   };
 
